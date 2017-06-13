@@ -25,32 +25,20 @@
     
     
 		<!-- Start Main Navigation -->
-        <div class="header-container" id="masthead">
+        <div class="header-container">
             <header class="wrapper clearfix">
             	<a href="index.html" class="logo"><img src="img/logo@2x.png" alt="Logo" /></a>
                 <nav>
            			<ul class="nav" id="nav">
-                    	<li><a class="active" href="index.html">Home</a></li>
+                    	<li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="styles.html">Styles</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="blog.html">Blog</a></li>
-                        <li class="last"><a href="contact.html">Contact</a></li>
+                        <li class="last"><a class="active" href="contact.html">Contact</a></li>
                     </ul>                	
                 </nav>
             </header>
-            
-            
-            <!-- Start Masthead -->
-            <div class="wrapper clearfix">
-            	<div class="cta two-third">
-            		<h1>shared on mobantu.com!</h1> 
-            		<h3>These are not them! You’ve captured their stunt doubles!</h3>
-            		<h5>— Spaceballs</h5>
-            		<br/>
-            		<p>No more boring V-Cards, Selfy is the perfect theme for self promotion. A little piece of the internet all about you, customise and self express with Selfy...  <a href="styles.html">Read More</a></p>
-            	</div>   	   
-            </div>
         </div>
         
         
@@ -62,35 +50,49 @@
             	
             	            	
             	<!-- Start Main Content -->
-                <div class="main-content full">
+                <div class="main-content">
                 	<div class="clearfix">
                 		
-                		<!-- Columns Thirds --> 
-                        <div class="clearfix">
-                        <div class="third">	
-                        	<h2>About me</h2>
-                        	<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus.</p> 
-                        	<p>Vivamus sagittis lacus vel augue laoreetrum faucibus dolor auctor. Aenean eu leonish quam ugue laoreet rutrum faucibus dolor.</p>
-                        </div>
-                        
-                        <div class="third">
-                        	<h2>What I do</h2>
-                        	<p>Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla hucibus idol.</p> 
-                        	<p>Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-                        </div>
-                        
-                        <div class="third last">
-                        	<h2>Get in touch</h2>
-                        	<p>Donec id elit non mi porta gravida at eget metus non mi porta gravida . Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam.</p>
-                        	<p><a href="contact.html" class="more">Say Hi, Email me</a></p>
-                        </div>
-                        </div>
-                        
-                                                                       
+                		<!-- Headings -->  
+                		<h1>Contact Me</h1>
+                		<p class="lead">Praesent commodo cursus magna, venenatis vestibulum. Donec id elit non mi porta gravida at eget vel scelerisl consectetur etsie. </p>
+                		
+                			<p class="">Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                		
+                		
+                		<form id="contactform" action="php/processForm.php" method="post">
+                			<table width="100%" class="tableless">
+                				<tr><td><input type="text" id="name" name="name" placeholder="What's your name" autofocus /></td></tr>
+                				<tr><td><input type="email" id="email" name="email" placeholder="Email goes here" /></td></tr>
+                				<tr><td><textarea id="message" name="message" rows="5" cols="20" placeholder="Whats this about?"></textarea></td></tr>
+                						
+                				<tr><td><input name="button" class="btn" type="submit" value="Send Message" id="send" /><br/></td></tr>
+                			</table>
+                		</form>
+                		<div id="response"></div>
+                			
+                			                                   
 					<!-- Finish Main Content -->
                 	</div>    
                 </div>
 				
+				
+				 <!-- Start Main Sidebar -->
+				<aside class="right-aside">
+				    <h2>Networks</h2>
+				    <ul>
+				    	<li><a href="post.html">Follow Me on Facebook</a></li>
+				    	<li><a href="post.html">Hanging out on Dribbble</a></li>
+				    	<li><a href="post.html">Tweeting up a storm</a></li>
+				    </ul>
+				   
+				   <hr class="dots"/> 
+				   
+				   
+				   <p><em>Vestibulum id ligula porta felis euismod semper. Maecenas sed diam eget risus varius blandit sit ametr nulla non metus auctor fringilla.</em></p>
+				   <p><a class="more" href="styles.html">See the Full Theme Styles</a></p>
+				    	
+				</aside>
 				
 				
 
@@ -98,6 +100,7 @@
         </div> <!-- #main-container -->
 
 
+		
 		<!-- Start Footer -->
 		<footer>
 			<div class="main wrapper clearfix">
@@ -115,7 +118,7 @@
 		</footer>
  
 
-		
+
 		<!-- Start Scripts -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
@@ -123,8 +126,11 @@
 		<script type="text/javascript" src="js/fitvids.min.js"></script>
 		<script type="text/javascript" src="js/jquery.widowFix-1.3.2.min.js"></script> 
 		<script type="text/javascript" src="js/fancybox/jquery.fancybox.js?v=2.1.4"></script>
-		<script type="text/javascript" src="js/backstretch.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/contact.js"></script>
+		<script type="text/javascript" src="js/jquery.form.js"></script>
+		<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="js/placeholder.js"></script>
+		<script src="js/main.js"></script>
 		
 		
 		
@@ -134,9 +140,7 @@
 		    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 		    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 		    s.parentNode.insertBefore(g,s)}(document,'script'));
-		    
 		</script>
-
 
         
     </body>
