@@ -1,5 +1,6 @@
 # SITE CONFIGURATION
 baseurl: ""
+SEOTitle: xfang
 url: "https://xfangfang.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
@@ -13,14 +14,14 @@ theme_settings:
 
   # Header and footer text
   header_text: > #two or three lines to describe your site
-     <p>Change header text in <code>_config.yml</code> <br> to update this feature.</p>
+     No piper can please all ears
   header_text_feature_image: assets/img/pexels/triangular.jpeg
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a>
 
   # Icons
   rss: true  # Make sure you created a feed.xml with feed.xml layout
-  email_address: # Full email address, e.g. "sam@example.com"
+  email_address: "xfangfang@126.com"
   behance:
   bitbucket:
   dribbble:
@@ -73,6 +74,8 @@ theme_settings:
 # PAGINATION
 paginate: 5
 paginate_path: "blog/page:num"
+
+permalink: /:categories/:title/
 
 # PORTFOLIO
 collections:
