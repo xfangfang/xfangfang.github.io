@@ -5,646 +5,564 @@
         <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
         <link>http://localhost:4000/</link>
         <description>A website with blog posts and pages</description>
-        <pubDate>Fri, 16 Mar 2018 20:50:57 +0800</pubDate>
+        <pubDate>Sat, 17 Mar 2018 00:41:45 +0800</pubDate>
         
         <item>
             <title>Hello Every One</title>
-            <link>/test/first-blog8.html</link>
-            <guid isPermaLink="true">/test/first-blog8.html</guid>
+            <link>/test/first-blog/</link>
+            <guid isPermaLink="true">/test/first-blog/</guid>
             <description>&lt;h1 id=&quot;i-am-a-big-title&quot;&gt;I am a BIG title&lt;/h1&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.
-This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;更换了新的博客&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;测试一下都支持什么功能&lt;/p&gt;
 </description>
             <pubDate>Fri, 16 Mar 2018 00:00:00 +0800</pubDate>
         </item>
         
         <item>
-            <title>Hello Every One</title>
-            <link>/test/first-blog7.html</link>
-            <guid isPermaLink="true">/test/first-blog7.html</guid>
-            <description>&lt;h1 id=&quot;i-am-a-big-title&quot;&gt;I am a BIG title&lt;/h1&gt;
+            <title>【前言】实现一个Android电子书阅读APP</title>
+            <link>/android/android-reading-app-01/</link>
+            <guid isPermaLink="true">/android/android-reading-app-01/</guid>
+            <description>&lt;p&gt;大家好，我是小方，我将在接下来的几篇文章中从零实现一个网络小说阅读器，从安卓编程最基础的部分讲起，直至成功完成我们的应用，从新建一个项目开始，不断添加新的代码，添加新的界面，循序渐进，涵盖所有我们需要的开发知识，应该可以为想要学习安卓开发的诸位提供助力。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.
-This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;本程序使用 Android Studio 进行开发，采用 Meterial Design 设计，相信如果我能成功更新完这一系列文章，而你又成功的阅读了我的这些内容，一定可以举一反三，写出其你自己想写的应用。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;当然了，在安卓开发中，小方尚属小白一名，斗胆将自己刚刚学到的知识分享出来，也算是现学现卖，如有错误疏漏之处还望大家海涵。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h3 id=&quot;在开始的地方我们先来展示一下咱们应用的最终效果&quot;&gt;在开始的地方，我们先来展示一下咱们应用的最终效果。&lt;/h3&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h2 id=&quot;图书列表&quot;&gt;图书列表&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;http://images2015.cnblogs.com/blog/901197/201703/901197-20170304093940313-1487048177.jpg&quot; alt=&quot;图书列表&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h2 id=&quot;排行榜&quot;&gt;排行榜&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;http://images2015.cnblogs.com/blog/901197/201703/901197-20170304093948595-2039251425.jpg&quot; alt=&quot;排行榜&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h2 id=&quot;阅读界面&quot;&gt;阅读界面&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;http://images2015.cnblogs.com/blog/901197/201703/901197-20170304093958532-629054657.jpg&quot; alt=&quot;阅读界面&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h2 id=&quot;阅读设置&quot;&gt;阅读设置&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;http://images2015.cnblogs.com/blog/901197/201703/901197-20170304094008126-2026759223.jpg&quot; alt=&quot;阅读设置&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h2 id=&quot;章节目录&quot;&gt;章节目录&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;http://images2015.cnblogs.com/blog/901197/201703/901197-20170304094018954-1923163971.jpg&quot; alt=&quot;章节目录&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h2 id=&quot;图书简介&quot;&gt;图书简介&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;http://images2015.cnblogs.com/blog/901197/201703/901197-20170304094057329-1021323825.jpg&quot; alt=&quot;图书简介&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h2 id=&quot;搜索界面&quot;&gt;搜索界面&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;http://images2015.cnblogs.com/blog/901197/201703/901197-20170304094106235-1264957737.jpg&quot; alt=&quot;搜索界面&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;大家看到了这么完美的最终效果心里或许会产生不小的激动呢，废话不多说了，首先从新建工程开始。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h2 id=&quot;下一节内容--新建项目使用viewpager创建可以来回滑动的主界面&quot;&gt;下一节内容 : 新建项目，使用ViewPager创建可以来回滑动的主界面!!!&lt;/h2&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/xfangs/p/6498238.html&quot;&gt;创建项目&amp;amp;使用ViewPager完成基本界面设计&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;欢迎加群大家互相交流
+&lt;img src=&quot;http://images2015.cnblogs.com/blog/901197/201703/901197-20170304093408454-908789768.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </description>
-            <pubDate>Fri, 16 Mar 2018 00:00:00 +0800</pubDate>
+            <pubDate>Fri, 03 Mar 2017 00:00:00 +0800</pubDate>
         </item>
         
         <item>
-            <title>Hello Every One</title>
-            <link>/test/first-blog6.html</link>
-            <guid isPermaLink="true">/test/first-blog6.html</guid>
-            <description>&lt;h1 id=&quot;i-am-a-big-title&quot;&gt;I am a BIG title&lt;/h1&gt;
+            <title>简单验证码识别</title>
+            <link>/python/captcha/</link>
+            <guid isPermaLink="true">/python/captcha/</guid>
+            <description>&lt;p&gt;前情：这篇文章所提及的内容是博主上个暑假时候做的，一直没有沉下心来把自己的心得写在纸面上，所幸这个假期闲暇时候比较多，想着能写多少是多少，于是就有了此篇。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.
-This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h1 id=&quot;验证码我也能破解&quot;&gt;验证码？我也能破解？&lt;/h1&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;关于验证码的介绍就不多说了，各种各样的验证码在人们生活中时不时就会冒出来，博主身为东北大学的学生，日常接触最多的就是教务处系统的验证码了。
+东大的验证码一直被学生吐槽，太难输入了，不仅区分大小写，有些时候你明明输入正确了，却提示出错，而这个时候 &lt;code class=&quot;highlighter-rouge&quot;&gt;禁止你的左键复制&lt;/code&gt; 也许该弹出来了。
+（不过16-17学年度教务处更改了验证码的内容，更方便人类操作了。）&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o7sehhiee.bkt.clouddn.com/origin.jpg&quot; alt=&quot;原始验证码&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;可以看出教务处的验证码十分有规律，每个字母数字的大小位置形状等等都是固定的，这正适合毫无基础的初学者进行验证码的识别。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h1 id=&quot;识别办法&quot;&gt;识别办法&lt;/h1&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;模拟登陆有着复杂的步骤，在这里咱们不管其他操作，只负责根据输入的一张验证码图片返回一个答案字符串。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;我们知道验证码为了制作干扰，会把图片弄成五颜六色的样子，而我们首先就是要去除这些干扰，这一步就需要不断试验了，增强图片色彩，加大对比度等等都可以产生帮助。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o7sehhiee.bkt.clouddn.com/afterEnhance.jpg&quot; alt=&quot;增强&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o7sehhiee.bkt.clouddn.com/afterSelect.jpg&quot; alt=&quot;选出全黑像素&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;在经过各种对图片的操作之后，终于找到了比较完美的去除干扰方案。可以看到在去除干扰之后，最优情况下，我们将得到一张十分纯净的黑白字符图片。一张图片上有四个字符，没办法一下子就把四个字符全部识别，需要把图片进行裁剪，裁剪成每张小图只有一个字符的样子，再对每张图片分别进行识别。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o7sehhiee.bkt.clouddn.com/crop1.jpg&quot; alt=&quot;6&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o7sehhiee.bkt.clouddn.com/crop2.jpg&quot; alt=&quot;+&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o7sehhiee.bkt.clouddn.com/crop3.jpg&quot; alt=&quot;5&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://o7sehhiee.bkt.clouddn.com/crop4.jpg&quot; alt=&quot;=&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;接下来就是识别文字了，我们首先把得到的小图转换成01表示的矩阵，每个矩阵代表一个字符。
+比如数字六的矩阵&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;num_6=[
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,1,1,0,0,0,0,0,0,
+0,0,0,0,1,1,1,0,0,0,0,0,0,
+0,0,0,1,1,1,0,0,0,0,0,0,0,
+0,0,0,1,1,0,0,0,0,0,0,0,0,
+0,0,1,1,0,0,0,0,0,0,0,0,0,
+0,0,1,1,0,0,0,0,0,0,0,0,0,
+0,1,1,1,1,1,1,1,0,0,0,0,0,
+0,1,1,1,1,1,1,1,1,0,0,0,0,
+0,1,1,0,0,0,0,1,1,1,0,0,0,
+0,1,1,0,0,0,0,0,1,1,0,0,0,
+0,1,1,0,0,0,0,0,1,1,0,0,0,
+0,1,1,1,0,0,0,1,1,1,0,0,0,
+0,0,1,1,1,1,1,1,1,0,0,0,0,
+0,0,0,1,1,1,1,1,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;远远望过去，眯着眼睛还是能分辨出来的。
+因为东大教务处的验证码十分规整，每个数字所在的位置都是固定的，所以并不需要涉及什么机器学习的算法，只是简单的进行一下矩阵的比对就可以了，在所有的实现做好的矩阵中找到相似度最高的矩阵就可以了，在这里的比对方法多种多样，反正数据简单能正确识别出来就好。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;至此，咱们的验证码识别工作就结束了。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h1 id=&quot;小结&quot;&gt;小结&lt;/h1&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;这次进行的验证码识别主要采用python的PIL进行图片操作，具体代码请看&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/xfangfang/studyPython/blob/master/neu/autoAAO.py&quot;&gt;xfangfang’s Github&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;关于NEU教务处模拟登陆的其他部分敬请期待。&lt;/p&gt;
 </description>
-            <pubDate>Fri, 16 Mar 2018 00:00:00 +0800</pubDate>
+            <pubDate>Sat, 21 Jan 2017 00:00:00 +0800</pubDate>
         </item>
         
         <item>
-            <title>Hello Every One</title>
-            <link>/test/first-blog5.html</link>
-            <guid isPermaLink="true">/test/first-blog5.html</guid>
-            <description>&lt;h1 id=&quot;i-am-a-big-title&quot;&gt;I am a BIG title&lt;/h1&gt;
+            <title>最小生成树 与 并查集</title>
+            <link>/algorithm/prim/</link>
+            <guid isPermaLink="true">/algorithm/prim/</guid>
+            <description>&lt;p&gt;最小生成树的算法严蔚敏教材提及两种，目的都是在无向加权连通图中寻找最小生成树。两种算法主要思想均为贪心法，一个是将点加入到树中，一个是搜集边最后组合成树。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.
-This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h1 id=&quot;prim&quot;&gt;prim&lt;/h1&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;prim方法首先随机定一个起点，然后遍历其他点，找到离此顶点最近的点加入到树中，再遍历其他顶点，找到离当前两个顶点中任意一个距离最近的点，按着这种添加方法，将所有点加入到树中，就完成了prim方法。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h3 id=&quot;代码&quot;&gt;代码&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int m,n,u,v,w;
+int dis[100][100],pre[100],sl[100];
+int prim(){
+    for(int i=2;i&amp;lt;=n;i++){
+        pre[i]=1;//pre[i]为i点所接的上一个顶点
+        sl[i] = dis[1][i];//sl[i]shortLine为所有顶点至当前树的距离
+    }
+    sl[1] = 0;//为0代表已经选出
+    pre[1]=0;
+    int sum = 0;
+    for(int i=2;i&amp;lt;=n;i++){
+        int min = 0x3f3f3f;
+        int id = 0;
+        for(int j=2;j&amp;lt;=n;j++){
+            if((sl[j]!=0) &amp;amp;&amp;amp; (min&amp;gt;sl[j])){
+                min = sl[j];
+                id = j;
+            }
+        }
+        cout&amp;lt;&amp;lt;pre[id]&amp;lt;&amp;lt;&quot; &quot;&amp;lt;&amp;lt;id&amp;lt;&amp;lt;&quot; &quot;&amp;lt;&amp;lt;min&amp;lt;&amp;lt;endl;
+        sum+=min;
+        sl[id] = 0;
+        for (int j=2; j&amp;lt;=n; j++) {
+            if (dis[id][j] &amp;lt; sl[j]) {
+                sl[j] = dis[id][j];
+                pre[j] = id;
+            }
+        }
+    }
+    return sum;
+}
+/*样例
+5 5
+1 2 1
+2 3 2
+3 4 3
+4 5 4
+1 5 3
+*/
+int main(int argc, const char * argv[]) {
+    memset(dis,0x3f3f3f,sizeof(dis));//邻接表储存图
+    scanf(&quot;%d%d&quot;,&amp;amp;n,&amp;amp;m);//点 边
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+    for(int i=1;i&amp;lt;=m;i++){
+        cin&amp;gt;&amp;gt;u&amp;gt;&amp;gt;v&amp;gt;&amp;gt;w;
+        dis[u][v] = dis[v][u] = w;
+    }//构建图（从1至n）
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+    int ans = prim();
+    cout&amp;lt;&amp;lt;ans&amp;lt;&amp;lt;endl;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;prim方法需要维护两个数组，一个数组保存着边的信息被定义为 &lt;code class=&quot;highlighter-rouge&quot;&gt;pre[maxN]&lt;/code&gt; pre[i]是i节点所连的前一个顶点，当只需要求得最小生成树的权值时很明显可以把它省略掉。另一个数组 &lt;code class=&quot;highlighter-rouge&quot;&gt;sl[maxN]&lt;/code&gt; 保存着的是未加入树的点与已经形成的树的距离，每加入一个新的点，新的点的sl值设为0，与新的点相连的点的sl[i]值也需要与i到新增点的距离进行判断取最小值，最后重新设置pre值。易知，当树构建完毕时，sl数组应该全为零。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;#并查集&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;在学习下一种求最小生成树的方法之前，我们先学习一下并查集的相关知识。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;并查集的主要目的就是把一个森林转化为几棵分别有共同根节点的树。要达到这个目的需要在每次加入新的边的时候自动连在根节点上，当然有些点在插入的时候没办法连在根节点上，所以在所有点插入完毕后再整体进行一次找根节点。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h3 id=&quot;代码-1&quot;&gt;代码&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
+using namespace std;
+int pre[100];
+int find(int x){
+    int r = x;
+    //找到老大
+    while(pre[r] != r){
+        r = pre[r];
+    }
+    //路径压缩--将一路上的点都直接连在老大身上
+    int j = x,k;
+    while(j != r){
+        k = pre[j];
+        pre[j] = r;
+        j = k;
+    }
+    return r;
+}
+void join(int a,int b){
+    int pa = find(a);
+    int pb = find(b);
+    if (pa != pb) {
+        pre[pa] = pb;
+    }
+}
+int main () {
+    int n,m,u,v;
+    scanf(&quot;%d%d&quot;,&amp;amp;n,&amp;amp;m);
+    for (int i=0; i&amp;lt;=n; i++) {
+        pre[i] = i;
+    }//初始化pre
+    for (int i=0; i&amp;lt;m ; i++) {
+        scanf(&quot;%d%d&quot;,&amp;amp;u,&amp;amp;v);
+        join(u,v);
+    }
+    for (int i=1; i&amp;lt;=n; i++) {
+        find(i);
+    }//再进行一次整体的查找使根最少
+    for (int i=1; i&amp;lt;=n; i++) {
+        printf(&quot;%d &quot;,pre[i]);
+    }
+    return 0;
+} 我最喜欢里面 ```路径压缩``` 的部分了，```路径压缩``` 是听起来十分高大上的一个词汇，但是它实现的原理十分简单，就是从当前点找到根节点，一路上遇到的所有不符合要求的数据全部连接在根节点上。 在join中，将节点少的点的根接入节点多的点的根能减小运行时间，不过要做到这一点需要额外进行其他操作，这里就不展开讨论了。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h1 id=&quot;kruskal&quot;&gt;kruskal&lt;/h1&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;有了并查集的知识，再来看kruskal就眼前一亮了，kruskal算法根据边的权值大小从小权值开始加入不能组成回路的边时，就需要并查集的理念，检查即将加入的边的两个端点是否有相同的根，如果有相同的根就不能添加，换下一条边。
+思路已经理清了，下面我来尝试一下。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h3 id=&quot;代码-2&quot;&gt;代码&lt;/h3&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+using namespace std;
+struct edge{
+    int u,v,w;
+    bool operator &amp;lt; (const edge &amp;amp;x) const{
+        return w &amp;lt; x.w;
+    };
+}edge;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+int pre[100];
+int find(int x){
+    int r = x;
+    //找到老大
+    while(pre[r] != r){
+        r = pre[r];
+    }
+    //路径压缩--将一路上的点都直接连在老大身上
+    int j = x,k;
+    while(j != r){
+        k = pre[j];
+        pre[j] = r;
+        j = k;
+    }
+    return r;
+}
+bool join(int a,int b){
+    int pa = find(a);
+    int pb = find(b);
+    if (pa != pb) {
+        pre[pa] = pb;
+    }
+    else{
+        return false;
+    }
+    return true;
+}
+int main () {
+    int n,m,u,v,w;
+    struct edge e[10000];
+    scanf(&quot;%d%d&quot;,&amp;amp;n,&amp;amp;m);
+    for (int i=0; i&amp;lt;=n; i++) {
+        pre[i] = i;
+    }//初始化pre
+    for (int i=0; i&amp;lt;m ; i++) {
+        scanf(&quot;%d%d%d&quot;,&amp;amp;u,&amp;amp;v,&amp;amp;w);
+        e[i].u = u;
+        e[i].v = v;
+        e[i].w = w;
+    }
+    sort(e, e+m);
+    int sum = 0;
+    for (int i=0; i&amp;lt;m; i++) {
+        bool res = join(e[i].u, e[i].v);
+        if(res){
+            cout&amp;lt;&amp;lt;e[i].u&amp;lt;&amp;lt;&quot; &quot;&amp;lt;&amp;lt;e[i].v&amp;lt;&amp;lt;endl;
+            sum += e[i].w;
+        }
+    }
+    printf(&quot;%d\n&quot;,sum);
+    return 0;
+} 思路十分简单，创建了一个struct来储存边，输入结束后，对边进行排序，依次添加边，如果遇到相同根的边就抛去不管，直至所有边添加成功。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;由此我们也可以看出，当边数比较多时，kruskal算法可就没有prim好用了。&lt;/p&gt;
 </description>
-            <pubDate>Fri, 16 Mar 2018 00:00:00 +0800</pubDate>
+            <pubDate>Wed, 18 Jan 2017 00:00:00 +0800</pubDate>
         </item>
         
         <item>
-            <title>Hello Every One</title>
-            <link>/test/first-blog4.html</link>
-            <guid isPermaLink="true">/test/first-blog4.html</guid>
-            <description>&lt;h1 id=&quot;i-am-a-big-title&quot;&gt;I am a BIG title&lt;/h1&gt;
+            <title>Sort Algorithm</title>
+            <link>/algorithm/sort/</link>
+            <guid isPermaLink="true">/algorithm/sort/</guid>
+            <description>&lt;p&gt;前情提要，本系列写于大二上学期的寒假，想要效仿前人实现一下数据结构教材上所列出的算法，从排序开始一点一点实现，，此章涉及到快速排序，希尔排序，归并排序，堆排序，基数排序。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.
-This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h1 id=&quot;快速排序&quot;&gt;快速排序&lt;/h1&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;首先我们应该懂得快速排序的原理，这样才能根据原理写出对应的算法。
+快速排序使用函数递归来进行排序，在无序序列中选择一个元素X作为基准数，将数组S分为三个部分，Sa是小于X的集合，Sb是大于X的集合，再分别对Sa与Sb进行快速排序。
+在这里不深究快速排序的诸多改进方法，只求实现最基本的快排。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h3 id=&quot;代码&quot;&gt;代码&lt;/h3&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void quickSort(int *a,int start,int end){
+    int flag,turn=1;
+    int l = start,r=end;
+    if(end-start &amp;lt;= 0)return;
+    flag = a[l];
+    while(l &amp;lt; r){
+        if(turn == 1){
+            if(a[r] &amp;gt;= flag){
+                r--;
+            }
+            else{
+                turn = 0;
+                a[l] = a[r];
+	              l++;
+            }
+        }
+        else{
+            if(a[l] &amp;lt;= flag){
+                l++;
+            }
+            else{
+                turn = 1;
+                a[r] = a[l];
+                r--;
+            }
+        }
+    }
+    a[l] = flag;
+    quickSort(a,start,l-start);//l-start是左边的长度
+    quickSort(a,l+1,end - l);//end-l是右边的长度
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;上面的代码是我根据原理自己写出来的，算不上简洁。在数组内元素与基准数比较大小时加入了一个标记量，判断下一次与基准数比较的元素位置，想着或许可以改进一下，不需要标记就能完成程序。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void quickSort(int *a,int start,int end){
+	int l = start,r=end,flag = a[l];
+	if(end-start &amp;lt;= 0) return;
+	while(l &amp;lt; r){
+	    while(l &amp;lt; r &amp;amp;&amp;amp; a[r] &amp;gt;= flag){
+	        r--;
+	    }
+	    if(l &amp;lt; r){
+	        a[l++] = a[r];
+	    }
+	    while(l &amp;lt; r &amp;amp;&amp;amp; a[l] &amp;lt;= flag){
+	        l++;
+	    }
+	    if(l &amp;lt; r){
+	        a[r--] = a[l];
+	    }
+	}
+	a[l] = flag;
+	quickSort(a,start,l-start);//l-start是左边的长度
+	quickSort(a,l+1,end - l);//len - (l-start) - 1 是右边的长度
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;到网上看了看别人的代码之后，发现可以用两个while来完成快排。原本最外面的while的功能被其中的两个while分担，这种思想与用栈深度优先遍历二叉树时向前进到左子树末尾的思想比较相似。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h3 id=&quot;小结&quot;&gt;小结&lt;/h3&gt;
+&lt;p&gt;首先快排是不稳定的，排序算法的不稳定性并不是排序过后序列还不是严格非递增或者非递减，而是在数组中有相同元素时，这个相同的元素可能会发生交换，比如序列 &lt;code class=&quot;highlighter-rouge&quot;&gt;533^&lt;/code&gt; 每次选择序列的第一个元素作为基准数，在排序后就变为了 &lt;code class=&quot;highlighter-rouge&quot;&gt;3^35&lt;/code&gt; 。
+然后对快排进行分析，很明显空间复杂度为O(1),当序列为逆序时，543&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h1 id=&quot;希尔排序&quot;&gt;希尔排序&lt;/h1&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;希尔排序是直接插入排序的一种改进，将无序序列以一定的增量划分为多个子序列，再对排好一趟的序列以更小的增量划分为子序列（要求这些增量之间是互质的，不然肯定会发生重复对有序序列排序的情况）在增量已经取得较小时，进行一次直接插入排序，就完成了希尔排序的全过程。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h3 id=&quot;代码-1&quot;&gt;代码&lt;/h3&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void shellSort(int *a,int start,int end,int i){//i为增量
+    int f;
+    for (int q = 0; q&amp;lt;i; q++) {
+        for (int j=start+i+q; j&amp;lt;=end; j+=i) {
+            if(j&amp;gt;=start+i &amp;amp;&amp;amp; a[j]&amp;lt;a[j-i]){
+                f = a[j];
+                int k = j;
+                while (k&amp;gt;=start+i &amp;amp;&amp;amp; f&amp;lt;a[k-i]) {
+                    a[k] = a[k-i];
+                    k-=i;
+                }
+                a[k] = f;
+            }
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;上面根据原理我自己写出的代码，实际就是插入排序的变体，因为无法确定增量的选择，所以将增量单独列出。这样在调用时只好调用多次，每次都写上不同的增量。
+关于希尔排序增量序列，就不在此文的研究范围内了，会在之后的补充中逐步加入&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;h3 id=&quot;小结-1&quot;&gt;小结&lt;/h3&gt;
+&lt;p&gt;希尔排序也是不稳定的，&lt;code class=&quot;highlighter-rouge&quot;&gt;533^6&lt;/code&gt; 按增量为2排序 排序后为 &lt;code class=&quot;highlighter-rouge&quot;&gt;3^356&lt;/code&gt; 这时候两个3的位置已经交换了，说明希尔排序并不稳定。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;未完待续…&lt;/p&gt;
 </description>
-            <pubDate>Fri, 16 Mar 2018 00:00:00 +0800</pubDate>
+            <pubDate>Tue, 17 Jan 2017 00:00:00 +0800</pubDate>
         </item>
         
         <item>
-            <title>Hello Every One</title>
-            <link>/test/first-blog3.html</link>
-            <guid isPermaLink="true">/test/first-blog3.html</guid>
-            <description>&lt;h1 id=&quot;i-am-a-big-title&quot;&gt;I am a BIG title&lt;/h1&gt;
+            <title>Spider NEU</title>
+            <link>/python/spider-neu/</link>
+            <guid isPermaLink="true">/python/spider-neu/</guid>
+            <description>&lt;h3 id=&quot;从东北大学教务处抓包获取课程表&quot;&gt;从东北大学教务处抓包获取课程表&lt;/h3&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.
-This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;假期本想要尝试做一些不同的事，却一直荒废，偶然看到了幕课，顿时后悔，再借我一个假期，一定在幕课上认真学习。比自己看书效率高很多啊！&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;于是反正无聊，用了一个晚上了解了一下python（仅限于了解），总想做点啥有意思的，想来想去还是和抓包联系上了。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;鉴于Wireshark我是真不怎么会用，这次抓包用的软件为Charles。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;Charles是Mac上比较好用的抓包软件，操作真的是十分简单，妈妈再也不用担心我不会抓包了。同时手机上的流量也是可以抓取的，将手机与电脑连在同一局域网，手动设置Wi-Fi代理，地址为电脑的内网IP，端口8888。太爱了！&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://img.blog.csdn.net/20160229173127727?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center&quot; alt=&quot;Charles&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;上面就是地址了，能看出只是提交了 用户名，md5加密的密码 以及 时间。
+首先先写一个md5加密的函数来&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def md5(str):
+    import hashlib
+    m = hashlib.md5()
+    m.update(str)
+    return m.hexdigest()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;我不会说我都是百度来的。。。
+然后是提交时间，也就是那个token,就我目前的水准来看（准小白），这个只是用来区分用户的，所以我果断的取了随机数，不过为了显得像正经的链接一点，还是把时间加在了前头。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def ran():
+      import random
+      return str(random.randint(1000000000000000000, 2999999999999999999))
+def tim():
+    import time
+	day = time.strftime(&quot;%Y%m%d&quot;)
+    now = time.strftime(&quot;%H%M%S&quot;)
+    return  day+now
+    userName = '20150000'
+    passwd = md5('20150000')
+    token = tim()
+    url = &quot;http://202.118.31.241:8080/api/v1/login?userName=&quot;+userName+&quot;&amp;amp;passwd=&quot;+passwd+&quot;&amp;amp;token&quot;+tim()+ran()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;这样提交的链接就弄好了。下面是进行网络操作，引用了urllib2。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def WebView(urls):
+	    import urllib2
+	    request=urllib2.Request(urls)
+	    web=urllib2.urlopen(request)
+	    return web.read().decode('gbk').encode('utf-8')
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;同样被我写成了函数的形式。
+根据后来操作的抓包来看，系统会返回一个时间的字符串以后的请求都是根据它来进行的
+	Login = WebView(url)
+先把咱们“制作”出来的链接在登陆函数里运行一下，得到返回值&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;{“success”:”0”,”errCode”:””,”errMsg”:””,”data”:{“token”:”201602291749112430008019436”,”userName”:”20150000”,”realName”:”路人甲”,”isTeacher”:”0”}}&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;上面就是返回的Login了。
+我们要获得那个token后面的数字,这个获得的东西呢是json格式的，我们进行解析就能得到token的值。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import json
+JsonLogin = json.loads(Login)
+token = JsonLogin['data']['token']
+UrlKeBiao = &quot;http://202.118.31.241:8080/api/v1/courseSchedule2?token=&quot;+token
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;当解析过后，JsonLogin就变成了dict类型，而JsonLogin[‘data’]是dict中的dict，最终用获取的token值我们就能进行各种访问了。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;上面的，&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;UrlKeBiao = “http://202.118.31.241:8080/api/v1/courseSchedule2?token=”+token&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;是我要的课程表地址&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;UrlKeBiao = “http://202.118.31.241:8080/api/v1/courseSchedule1?token=”+token&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;把2换成1就变成了成绩查询的地址&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;还有什么空教室，创新学分，等等都可以查看了，这些内容都是json格式的，进行解析过后就能够流畅阅读
+比如我写的解析课程表的代码：&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;KeBiao = WebView(UrlKeBiao)
+JsonKeBiao = json.loads(KeBiao)
+k=0
+r=0
+while r!=6:
+    print &quot;%-25.20s&quot;%(JsonKeBiao['data'][k+r]['name']),
+    k+=6
+    if k==42:
+        k=0
+        r=r+1
+        print '\n'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;p&gt;为了能正常显示汉语，还需要加上下面这四行。&lt;/p&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# -*- coding: utf-8 -*
+import sys
+reload(sys)
+sys.setdefaultencoding( &quot;utf-8&quot; )
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
 </description>
-            <pubDate>Fri, 16 Mar 2018 00:00:00 +0800</pubDate>
-        </item>
-        
-        <item>
-            <title>Hello Every One</title>
-            <link>/test/first-blog2.html</link>
-            <guid isPermaLink="true">/test/first-blog2.html</guid>
-            <description>&lt;h1 id=&quot;i-am-a-big-title&quot;&gt;I am a BIG title&lt;/h1&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.
-This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-</description>
-            <pubDate>Fri, 16 Mar 2018 00:00:00 +0800</pubDate>
-        </item>
-        
-        <item>
-            <title>Hello Every One</title>
-            <link>/test/first-blog1.html</link>
-            <guid isPermaLink="true">/test/first-blog1.html</guid>
-            <description>&lt;h1 id=&quot;i-am-a-big-title&quot;&gt;I am a BIG title&lt;/h1&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.
-This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-</description>
-            <pubDate>Fri, 16 Mar 2018 00:00:00 +0800</pubDate>
-        </item>
-        
-        <item>
-            <title>Hello Every One</title>
-            <link>/test/first-blog0.html</link>
-            <guid isPermaLink="true">/test/first-blog0.html</guid>
-            <description>&lt;h1 id=&quot;i-am-a-big-title&quot;&gt;I am a BIG title&lt;/h1&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.
-This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-</description>
-            <pubDate>Fri, 16 Mar 2018 00:00:00 +0800</pubDate>
-        </item>
-        
-        <item>
-            <title>Hello Every One</title>
-            <link>/test/first-blog.html</link>
-            <guid isPermaLink="true">/test/first-blog.html</guid>
-            <description>&lt;h1 id=&quot;i-am-a-big-title&quot;&gt;I am a BIG title&lt;/h1&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.
-This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-
-&lt;p&gt;This is a very tiny tiny post with less than 250 letters.&lt;/p&gt;
-</description>
-            <pubDate>Fri, 16 Mar 2018 00:00:00 +0800</pubDate>
+            <pubDate>Sat, 05 Nov 2016 00:00:00 +0800</pubDate>
         </item>
         
     </channel>

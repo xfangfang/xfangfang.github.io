@@ -1,63 +1,14 @@
 ---
 layout: post
 title: Hello Every One
-tags: [Test, Ipsum, Markdown, Portfolio]
+tags: [Test, Markdown]
+thumbnail_test: assets/img/pexels/triangular.jpeg
 categories: test
+subtitle: 测试静态博客的副标题功能
 ---
 
 # I am a BIG title
 
-This is a very tiny tiny post with less than 250 letters.
-This is a very tiny tiny post with less than 250 letters.
+更换了新的博客
 
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
-
-This is a very tiny tiny post with less than 250 letters.
+测试一下都支持什么功能

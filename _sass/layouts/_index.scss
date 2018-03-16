@@ -13,8 +13,8 @@
     /* --- Responsive --- */
     @media screen and (max-width: 850px) {
         background-size: 100% auto;
-    } 
-    
+    }
+
     //For white images
     p,
     a,
@@ -45,6 +45,7 @@
         display: inline-block;
         background-size: $feature-image-size;
         border-bottom: 1px solid $border-color;
+        font-size: 0.9em;
         p a {
             @extend .body-link;
         }
@@ -68,6 +69,7 @@
 
         .post-img img {
             //max-width: 100%;
+
             -moz-transform: scale(1);
             -webkit-transform: scale(1);
             transform: scale(1);
@@ -89,6 +91,7 @@
     }
     .excerpt {
         margin-top: 1em;
+        font-size: 0.9em;
     }
 }
 
