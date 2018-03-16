@@ -45,9 +45,10 @@
         display: inline-block;
         background-size: $feature-image-size;
         border-bottom: 1px solid $border-color;
-        font-size: 0.9em;
+
         p a {
             @extend .body-link;
+            font-size: 0.7em;
         }
         img {
             padding: 0;
@@ -88,6 +89,9 @@
                 transform: scale(1.3);
             }
         }
+    }
+    .post-link {
+        font-size: 0.6em;
     }
     .excerpt {
         margin-top: 1em;
