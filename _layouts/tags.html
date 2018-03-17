@@ -22,10 +22,10 @@ layout: page
 {% for page in site.pages %}
 {% assign page_tags = page.tags | join:'|'  %}
 {% assign rawtags = rawtags | append:page_tags %}
-{% endfor %}    
-    
+{% endfor %}
+
 <!-- Displays the list of tags-->
-{% include tags_list.html tags=rawtags %}
+{% include tags_list_in_page.html tags=rawtags %}
 
     <!-- Displays the posts and pages that contains the tag-->
     <div class="posts">
@@ -40,51 +40,51 @@ layout: page
         <div class="tag-posts">
 
             <!-- Pages -->
-            {% for page in site.pages %} 
+            {% for page in site.pages %}
                 {% if page.tags contains tag %}
                 <h5 class="tag-title">
                     <a href="{{ page.url | prepend: site.baseurl }}">
                         <i class="fa fa-file-image-o" aria-hidden="true"></i>
                         {{ page.title }}
                     </a>
-                    
+
                     <div class="meta">
                         {{ "today" | date: "%B %-d, %Y" }}
                     </div>
                 </h5>
-                {% endif %} 
-            {% endfor %} 
-            
+                {% endif %}
+            {% endfor %}
+
             <!-- Posts -->
-            {% for post in site.posts %} 
+            {% for post in site.posts %}
                 {% if post.tags contains tag %}
                 <h5 class="tag-title">
                     <a href="{{ post.url | prepend: site.baseurl }}">
                         <i class="fa fa-file-text-o" aria-hidden="true"></i>
                         {{ post.title }}
                     </a>
-                    
+
                     <div class="meta">
                         {{ post.date | date: "%B %-d, %Y" }}
                     </div>
                 </h5>
-                {% endif %} 
-            {% endfor %} 
-            
+                {% endif %}
+            {% endfor %}
+
             <!-- Portfolio -->
-            {% for note in site.portfolio %} 
+            {% for note in site.portfolio %}
                 {% if note.tags contains tag %}
                 <h5 class="tag-title">
                     <a href="{{ site.baseurl }}{{ note.url }}">
                         <i class="fa fa-file-o" aria-hidden="true"></i>
                         {{ note.title }}
                     </a>
-                
+
                     <div class="meta">
                         {{ note.date | date: "%B %-d, %Y" }}
                     </div>
                 </h5>
-                {% endif %} 
+                {% endif %}
             {% endfor %}
 
         </div>

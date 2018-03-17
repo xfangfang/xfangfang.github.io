@@ -14,8 +14,8 @@ theme_settings:
 
   # Header and footer text
   header_text: > #two or three lines to describe your site
-     A candle lights others and consumes itself
-  header_text_feature_image: assets/img/pexels/triangular.jpeg
+     <p>A candle lights others and consumes itself</p>
+  header_text_feature_image: assets/img/tree.jpg
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a>
 
@@ -75,7 +75,7 @@ theme_settings:
 paginate: 5
 paginate_path: "blog/page:num"
 
-permalink: /:categories/:title/
+permalink: /:categories/:title
 
 # PORTFOLIO
 collections:

@@ -22,6 +22,8 @@
 
 // Buttons
 .button {
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
     border-radius: 0.3em;
     border: 1px solid;
     display: inline-block;
@@ -29,7 +31,36 @@
     padding: 0.5em 0.75em;
 }
 
+.button_num {
+    -moz-border-radius: 5em;
+    -webkit-border-radius: 5em;
+    border-radius: 5em;
+    border: 1px solid;
+    display: inline-block;
+    height: 1.2em;
+    width: 1.2em;
+}
+
+.button_num_down{
+    -moz-border-radius: 5em;
+    -webkit-border-radius: 5em;
+    border-radius: 5em;
+    border: 1px solid;
+    display: inline-block;
+    height: 1.2em;
+    width: 1.2em;
+
+    background: $link-color;
+    border: 1px solid $link-color;
+    color: $background-color;
+    text-decoration: none;
+}
+
 a.button {
+    @extend .button-link;
+}
+
+a.button_num {
     @extend .button-link;
 }
 
