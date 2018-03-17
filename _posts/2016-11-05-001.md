@@ -1,0 +1,110 @@
+---
+layout: post
+title: Spider NEU
+tags: [NEU,spider,charles,python]
+categories: python
+---
+
+### 从东北大学教务处抓包获取课程表
+
+假期本想要尝试做一些不同的事，却一直荒废，偶然看到了幕课，顿时后悔，再借我一个假期，一定在幕课上认真学习。比自己看书效率高很多啊！
+
+于是反正无聊，用了一个晚上了解了一下python（仅限于了解），总想做点啥有意思的，想来想去还是和抓包联系上了。
+
+鉴于Wireshark我是真不怎么会用，这次抓包用的软件为Charles。
+
+Charles是Mac上比较好用的抓包软件，操作真的是十分简单，妈妈再也不用担心我不会抓包了。同时手机上的流量也是可以抓取的，将手机与电脑连在同一局域网，手动设置Wi-Fi代理，地址为电脑的内网IP，端口8888。太爱了！
+
+![Charles][1]
+
+上面就是地址了，能看出只是提交了 用户名，md5加密的密码 以及 时间。
+首先先写一个md5加密的函数来
+
+	def md5(str):
+	    import hashlib
+	    m = hashlib.md5()
+	    m.update(str)
+	    return m.hexdigest()
+
+我不会说我都是百度来的。。。
+然后是提交时间，也就是那个token,就我目前的水准来看（准小白），这个只是用来区分用户的，所以我果断的取了随机数，不过为了显得像正经的链接一点，还是把时间加在了前头。
+
+
+    def ran():
+          import random
+          return str(random.randint(1000000000000000000, 2999999999999999999))
+    def tim():
+        import time
+    	day = time.strftime("%Y%m%d")
+        now = time.strftime("%H%M%S")
+        return  day+now
+        userName = '20150000'
+        passwd = md5('20150000')
+        token = tim()
+        url = "http://202.118.31.241:8080/api/v1/login?userName="+userName+"&passwd="+passwd+"&token"+tim()+ran()
+
+这样提交的链接就弄好了。下面是进行网络操作，引用了urllib2。
+
+
+    def WebView(urls):
+    	    import urllib2
+    	    request=urllib2.Request(urls)
+    	    web=urllib2.urlopen(request)
+    	    return web.read().decode('gbk').encode('utf-8')
+
+同样被我写成了函数的形式。
+根据后来操作的抓包来看，系统会返回一个时间的字符串以后的请求都是根据它来进行的
+	Login = WebView(url)
+先把咱们“制作”出来的链接在登陆函数里运行一下，得到返回值
+
+
+   {"success":"0","errCode":"","errMsg":"","data":{"token":"201602291749112430008019436","userName":"20150000","realName":"路人甲","isTeacher":"0"}}
+
+上面就是返回的Login了。
+我们要获得那个token后面的数字,这个获得的东西呢是json格式的，我们进行解析就能得到token的值。
+
+
+    import json
+    JsonLogin = json.loads(Login)
+    token = JsonLogin['data']['token']
+    UrlKeBiao = "http://202.118.31.241:8080/api/v1/courseSchedule2?token="+token
+
+当解析过后，JsonLogin就变成了dict类型，而JsonLogin['data']是dict中的dict，最终用获取的token值我们就能进行各种访问了。
+
+上面的，
+
+
+> UrlKeBiao = "http://202.118.31.241:8080/api/v1/courseSchedule2?token="+token
+
+是我要的课程表地址
+
+>UrlKeBiao = "http://202.118.31.241:8080/api/v1/courseSchedule1?token="+token
+
+把2换成1就变成了成绩查询的地址
+
+还有什么空教室，创新学分，等等都可以查看了，这些内容都是json格式的，进行解析过后就能够流畅阅读
+比如我写的解析课程表的代码：
+
+
+    KeBiao = WebView(UrlKeBiao)
+    JsonKeBiao = json.loads(KeBiao)
+    k=0
+    r=0
+    while r!=6:
+        print "%-25.20s"%(JsonKeBiao['data'][k+r]['name']),
+        k+=6
+        if k==42:
+            k=0
+            r=r+1
+            print '\n'
+
+为了能正常显示汉语，还需要加上下面这四行。
+
+
+    # -*- coding: utf-8 -*
+    import sys
+    reload(sys)
+    sys.setdefaultencoding( "utf-8" )
+
+
+[1]: http://img.blog.csdn.net/20160229173127727?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center
