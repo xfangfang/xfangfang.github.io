@@ -1,18 +1,41 @@
 <div id="post-nav">
-  {% if page.previous.url %}
-  <div id="previous-post" class="post-nav-post">
-      <p>{{ site.theme_settings.str_previous_post }}</p>
-      <a href="{{ site.baseurl }}{{ page.previous.url }}">
-        {{ page.previous.title }}
-      </a>
-  </div>
-  {% endif %}
-  {% if page.next.url %}
-  <div id="next-post" class="post-nav-post">
-      <p>{{ site.theme_settings.str_next_post }}</p>
-      <a href="{{ site.baseurl }}{{ page.next.url }}">
-        {{ page.next.title }}
-      </a>
-  </div>
+    {% if page.previous.show != 1 %}
+          {% if page.previous.url %}
+          <div id="previous-post" class="post-nav-post">
+              <p>{{ site.theme_settings.str_previous_post }}</p>
+              <a href="{{ site.baseurl }}{{ page.previous.url }}">
+                {{ page.previous.title }}
+              </a>
+          </div>
+          {% endif %}
+     {% else %}
+         {% if page.previous.previous.url %}
+         <div id="previous-post" class="post-nav-post">
+             <p>{{ site.theme_settings.str_previous_post }}</p>
+             <a href="{{ site.baseurl }}{{ page.previous.previous.url }}">
+               {{ page.previous.previous.title }}
+             </a>
+         </div>
+         {% endif %}
+     {% endif %}
+
+  {% if page.next.show != 1 %}
+      {% if page.next.url %}
+      <div id="next-post" class="post-nav-post">
+          <p>{{ site.theme_settings.str_next_post }}</p>
+          <a href="{{ site.baseurl }}{{ page.next.url }}">
+            {{ page.next.title }}
+          </a>
+      </div>
+      {% endif %}
+  {% else %}
+      {% if page.next.next.url %}
+      <div id="next-post" class="post-nav-post">
+          <p>{{ site.theme_settings.str_next_post }}</p>
+          <a href="{{ site.baseurl }}{{ page.next.next.url }}">
+            {{ page.next.next.title }}
+          </a>
+      </div>
+      {% endif %}
   {% endif %}
 </div>
