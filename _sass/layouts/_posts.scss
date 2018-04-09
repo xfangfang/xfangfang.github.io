@@ -20,6 +20,18 @@ article {
     }
 }
 
+#back-to-top {
+    position: fixed;
+    bottom: 4em;
+    right: 1em;
+    z-index: 1;
+    cursor: pointer;
+}
+#back-to-top-img {
+    width: 4em;
+    height: auto;
+}
+
 footer {
     width: 100%;
     margin-top: 0;
