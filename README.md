@@ -6,6 +6,7 @@
 
 - changed some font style
 - add a new blog page indicator
+- add a tree in each article
 
 ## Thanks
 
