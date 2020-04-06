@@ -1,12 +1,12 @@
 # SITE CONFIGURATION
 baseurl: ""
-SEOTitle: xfang
+SEOTitle: xfangfang
 url: "https://xfangfang.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: xfang
+  title: xfangfang
   avatar: assets/img/zhihu.png
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
@@ -16,8 +16,7 @@ theme_settings:
   header_text: > #two or three lines to describe your site
      <p>A candle lights others and consumes itself</p>
   header_text_feature_image: assets/img/tree.jpg
-  footer_text: >
-   Powered by <a href="https://jekyllrb.com/">Jekyll</a>
+  footer_text: ' '
 
   # Icons
   rss: true  # Make sure you created a feed.xml with feed.xml layout
