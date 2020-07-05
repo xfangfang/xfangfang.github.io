@@ -41,6 +41,16 @@
             </a>
         </li>
         {% endif %}
+				{% if site.theme_settings.gobang %}
+				<li class="separator">
+						|
+				</li>
+				<li>
+						<a class="clear" href="{{ site.baseurl }}/gobang">
+								Gobang
+						</a>
+				</li>
+				{% endif %}
         {% if site.theme_settings.search %}
         <li class="separator">
             |
