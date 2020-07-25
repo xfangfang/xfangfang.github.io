@@ -15,7 +15,7 @@ theme_settings:
   # Header and footer text
   header_text: > #two or three lines to describe your site
      <p>A candle lights others and consumes itself</p>
-  header_text_feature_image: assets/img/tree.jpg
+  header_text_feature_image: assets/img/eye.jpeg
   footer_text: ' '
 
   # Icons
