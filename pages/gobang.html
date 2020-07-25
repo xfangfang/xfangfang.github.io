@@ -7,7 +7,7 @@ permalink: /gobang/
 {% include head.html %}
 <head>
   <meta charset="utf-8">
-  <title>五子棋</title>
+  <title>gobang</title>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
 </head>
@@ -19,7 +19,7 @@ permalink: /gobang/
     <div class="gomoku">
       <div class="display">
         <div class="chessboard">
-          <div :class="['left', model.player === 1 ? 'reverse' : '']"><span v-show="gameStatus === 'start' && forbidden">AI思考中<i class="ani_dot">...</i></span></div>
+          <div :class="['left', model.player === 1 ? 'reverse' : '']"><span v-show="gameStatus === 'start' && forbidden">AI Thinking<i class="ani_dot">...</i></span></div>
           <div class="chessBox-wrapper">
             <div class="chessBox">
               <div :class="['game-title', ['win', 'lose', 'peace'].includes(gameStatus) ? 'fade' : '' ]"></div>
@@ -39,33 +39,32 @@ permalink: /gobang/
               </div>
             </div>
           </div>
-          <div :class="['right', model.player === 1 ? 'reverse' : '']"><span v-show="gameStatus === 'start' && !forbidden">请玩家行棋<i class="ani_dot">...</i></span></div>
+          <div :class="['right', model.player === 1 ? 'reverse' : '']"><span v-show="gameStatus === 'start' && !forbidden">Your Turn<i class="ani_dot">...</i></span></div>
         </div>
       </div>
       <div class="pannels">
-        <pannel label="游戏介绍">
+        <pannel label="Game Overview">
           <div style="color: #333">
-            <div>AlphaZero，是由Google DeepMind公司研发的、目前为止最优秀的棋类AI算法，过去几年中它在各类国际大赛中横扫所有对手。</div>
-            <div>在这里，大家可以和自己在编程平台上训练的AlphaZero五子棋模型对弈，人类是否能够战胜人工智能、拭目以待！</div>
-            <div  style="margin-top: 20px; font-size: 14px; color: #999">特别说明：Google DeepMind的AlphaZero程序，在模型训练阶段，使用5000个一代TPU产生自我对弈的棋局数据、以及64个二代TPU训练神经网络；在模型评估阶段，使用4个TPU。而我们的AlphaZero程序，仅仅使用一台拥有i7处理器的PC训练模型。</div>
+            <div>Can you beat the Gomoku AI Robot that I built? Try it please! </div>
+            <div>It is based on AlphaZero, the most powerful model of the AlphaGo series designed by Google DeepMind in 2017.</div>
           </div>
         </pannel>
-        <pannel label="游戏控制">
+        <pannel label="Game Control">
           <div>
-            <label class="label-text" >玩家选择:</label>
+            <label class="label-text" >Side Selection:</label>
             <select class="select-text" v-model="model.player" :disabled="this.gameStatus === 'start'">
               <option :value="option.value"  v-for="option in player_options" :label="option.label"></option>
             </select>
           </div>
           <div>
-            <label class="label-text">棋盘选择:</label>
+            <label class="label-text">Board Size:</label>
             <select class="select-text" v-model="model.size" :disabled="this.gameStatus === 'start'">
               <option  :value="option.value"  v-for="option in size_options" :label="option.label"></option>
             </select>
           </div>
           <div class="game-start" >
-            <button v-if="gameStatus === 'start'" class="btn-dark is-round" @click="end">结束游戏</el-button>
-            <button v-else class="btn-dark is-round" @click="start">开始游戏</el-button>
+            <button v-if="gameStatus === 'start'" class="btn-dark is-round" @click="end">Stop</el-button>
+            <button v-else class="btn-dark is-round" @click="start">Start</el-button>
           </div>
         </pannel>
       </div>
@@ -75,7 +74,7 @@ permalink: /gobang/
   <script  type = "text/javascript">
     Vue.component('pannel', {
       props: ['label'],
-      template: '<div class="property-panel"><div class="panel-wrapper"><p class="panel-label"><i></i><option style="margin-right: 20px;" :label="label"></option></p></div><div class="panel"><slot/></div></div>'
+      template: '<div class="property-panel"><div class="panel-wrapper"><p class="panel-label"><i></i><option :label="label"></option></p></div><div class="panel"><slot/></div></div>'
     })
     new Vue({
       el: '#app',
@@ -90,10 +89,10 @@ permalink: /gobang/
           }],
           player_options: [{
             value: 2,
-            label: '白棋后手'
+            label: 'White(Move Second)'
           }, {
             value: 1,
-            label: '黑棋先手'
+            label: 'Black(Move First)'
           }],
           board: [],
           forbidden: true, //玩家禁止下棋
@@ -275,13 +274,13 @@ permalink: /gobang/
       background: url("https://weai.aishuwen.com/AI_black.png") 0% 30%/90% no-repeat;
     }
     .gomoku .display .chessboard .right {
-      background: url("https://weai.aishuwen.com/human_white.png") 100% 90%/90% no-repeat;
+      background: url("https://weai.aishuwen.com/human_white_eng_v2.png") 100% 90%/90% no-repeat;
     }
     .gomoku .display .chessboard .left.reverse {
       background: url("https://weai.aishuwen.com/AI_white.png") 0% 30%/90% no-repeat;
     }
     .gomoku .display .chessboard .right.reverse {
-      background: url("https://weai.aishuwen.com/human_black.png") 100% 90%/90% no-repeat;
+      background: url("https://weai.aishuwen.com/human_black_eng.png") 100% 90%/90% no-repeat;
     }
     .gomoku .display .chessboard .chessBox-wrapper {
       width: 56%;
@@ -306,19 +305,19 @@ permalink: /gobang/
       width: 100%;
       position: absolute;
       bottom: 100%;
-      height: 15%;
-      background: url("https://weai.aishuwen.com/AlphaZero.png") center center/cover no-repeat;
+      height: 14.4%;
+      background: url("https://weai.aishuwen.com/AlphaZero_eng.png") center center/cover no-repeat;
     }
     .gomoku .display .chessboard .chessBox-wrapper .chessBox .win {
-      background: url("https://weai.aishuwen.com/win.png") center center/cover no-repeat;
+      background: url("https://weai.aishuwen.com/win_eng.png") center center/cover no-repeat;
       opacity: 0;
     }
     .gomoku .display .chessboard .chessBox-wrapper .chessBox .lose {
-      background: url("https://weai.aishuwen.com/lose.png") center center/cover no-repeat;
+      background: url("https://weai.aishuwen.com/lose_eng.png") center center/cover no-repeat;
       opacity: 0;
     }
     .gomoku .display .chessboard .chessBox-wrapper .chessBox .peace {
-      background: url("https://weai.aishuwen.com/peace.png") center center/cover no-repeat;
+      background: url("https://weai.aishuwen.com/peace_eng.png") center center/cover no-repeat;
       opacity: 0;
     }
     .gomoku .display .chessboard .chessBox-wrapper .chessBox .fade {
@@ -332,7 +331,7 @@ permalink: /gobang/
       position: absolute;
       z-index: 15;
       top: -17%;
-      left: 43%;
+      left: 39%;
       height: 22%;
       width: 30%;
       background: url("https://weai.aishuwen.com/robot.png") center center/contain no-repeat;
@@ -513,7 +512,6 @@ permalink: /gobang/
       line-height: 45px;
     }
     .property-panel .panel-wrapper .panel-label {
-      flex-grow: 1;
       user-select: none;
       -webkit-user-select: none;
       font-size: 18px;
