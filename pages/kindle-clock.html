@@ -1,0 +1,168 @@
+---
+permalink: /clock/
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>clock</title>
+
+    <link href="http://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+          color: #000000;
+          background-color: #ffffff;
+          margin: 0;
+        }
+        .rotate-800 {
+          -webkit-transform: rotate(90deg) translate(0px,200px) scale(1.2);
+        }
+        .rotate-1024 {
+          -webkit-transform: rotate(90deg) translate(0px,300px) scale(1.2);
+        }
+        .rotate-1448 {
+          -webkit-transform: rotate(90deg) translate(0px,400px) scale(1.2);
+        }
+        .rotate-1680 {
+          -webkit-transform: rotate(90deg) translate(0px,500px) scale(1.2);
+        }
+        .page {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+        }
+
+        .time_container,
+        .date_container {
+          width: 100%;
+          margin: 0;padding: 0;
+          margin: auto;
+          text-align: center;
+        }
+
+        .time_container {
+          top: 0;
+          height: 40%;
+        }
+
+        .date_container {
+          padding-top: 0px;
+        }
+
+        .time {
+          padding-top: 40px;
+          font-size: 10em;
+          font-family: 'Julius Sans One', sans-serif;
+          font-weight: 700;
+        }
+
+        .date {
+          padding-top: 40px;
+          font-size: 5em;
+          font-family: 'Julius Sans One', sans-serif;
+        }
+
+        #weather-v2-plugin-standard {
+          margin: auto !important;
+          margin-top: 40px !important;
+        }
+        .wv-lt-refresh {
+            display: none !important;
+        }
+        .wv-n-h-now-rain {
+            display: none !important;
+        }
+        .wv-n-h-now-txt {
+            font-size: 2rem !important;
+        }
+        .wv-n-h-now-tmp {
+            font-size: 2rem !important;
+        }
+        img {
+            width: 8rem !important;
+        }
+        .wv-lt-location span{
+            font-size: 2rem !important;
+        }
+        .wv-lt-location a{
+            font-size: 1rem !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page" id="page" >
+      <div class="time_container" onclick="change()">
+          <div class="time" id="time"></div>
+      </div>
+
+      <div class="date_container" onclick="change()">
+          <div class="date" id="date"></div>
+      </div>
+      <!-- weather widget from  https://cj.weather.com.cn/ -->
+      <div id="weather-v2-plugin-standard"></div>
+      <script>
+      WIDGET = {
+          CONFIG: {
+              "layout": 1,
+              "width": window.screen.height/2,
+              "height": window.screen.height/3,
+              "background": 5,
+              "dataColor": "000000",
+              "modules": "10",
+              "key": "1W26JbTAJH",
+              "language": "auto"
+            }
+      }
+      </script>
+      <script src="https://apip.weatherdt.com/standard/static/js/weather-standard-common.js?v=2.0"></script>
+     <!-- weather widget end -->
+    </div>
+
+
+    <script>
+      var last_time;
+      function update() {
+        var date = new Date()
+        var utc8DiffMinutes = date.getTimezoneOffset() + 480
+        date.setMinutes(date.getMinutes() + utc8DiffMinutes)
+
+        var timeString = date.getHours() + ':' + ('0' + date.getMinutes()).slice(-2)
+        var dateString = (date.getMonth() + 1) + '/' + date.getDate()
+        var weekList = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
+        var weekString = weekList[date.getDay()]
+        if(last_time != timeString){
+            document.getElementById("time").innerHTML = timeString
+            document.getElementById("date").innerHTML = dateString + ' ' +  weekString
+        }
+        last_time = timeString;
+      }
+
+      function change() {
+        var page = document.getElementById("page");
+        if (window.screen.height <= 800) {
+          page.classList.toggle('rotate-800');
+        } else if(window.screen.height <= 1024){
+          page.classList.toggle('rotate-1024');
+        } else if(window.screen.height <= 1448){
+          page.classList.toggle('rotate-1448');
+        } else if(window.screen.height <= 1680){
+          page.classList.toggle('rotate-1680');
+        }
+      }
+
+      function fontSize(){
+        document.documentElement.style.fontSize=(window.screen.height/40)+"px";
+     }
+     fontSize();
+     window.onresize=fontSize;
+
+      update()
+      setInterval("update()", 1 * 1000)
+
+    </script>
+</body>
+</html>
