@@ -26,7 +26,7 @@ permalink: /clock/
         display: none;
       }
       .style-2 #time{
-        font-size: 14rem;
+        font-size: 13rem;
       }
     </style>
     <style>
@@ -90,7 +90,7 @@ permalink: /clock/
 
     <div class="page style-0" id="page" >
       <div class="time" id="time" onclick="changeStyle()"></div>
-      <div class="date" id="date" onclick="changeStyle()"></div>
+      <div class="date" id="date" onclick="pause()"></div>
 
       <!-- weather widget from  https://cj.weather.com.cn/ -->
       <div id="weather-v2-plugin-standard"></div>
@@ -115,39 +115,50 @@ permalink: /clock/
 
     <script>
       var last_time;
+      var interval_id;
       var style = 0;
-      const time = document.getElementById("time");
-      const date = document.getElementById("date");
-      const page = document.getElementById("page");
+      const timeDiv = document.getElementById("time");
+      const dateDiv = document.getElementById("date");
+      const pageDiv = document.getElementById("page");
+      const halt = "HALT";
 
-
+      function pause(){
+        if (timeDiv.innerHTML == halt) {
+          last_time = 0;
+          updateTime()
+          interval_id = setInterval("updateTime()", 1 * 1000)
+        } else {
+          clearInterval(interval_id);
+          timeDiv.innerHTML = halt;
+        }
+      }
       function setTimeAndDateWidgetHeight(base,timeHeight,dateHeight) {
-        time.style.height = base*timeHeight+"px";
-        time.style.lineHeight = base*timeHeight+"px";
-        date.style.height = base*dateHeight+"px";
-        date.style.lineHeight = base*dateHeight+"px";
+        timeDiv.style.height = base*timeHeight+"px";
+        timeDiv.style.lineHeight = base*timeHeight+"px";
+        dateDiv.style.height = base*dateHeight+"px";
+        dateDiv.style.lineHeight = base*dateHeight+"px";
       }
       function changeStyle() {
         var clientHeight = document.documentElement.clientHeight;
         var clientWidth = document.documentElement.clientWidth;
         switch (style) {
           case 1:
-            page.classList.add('style-1');
-            page.style.left = 0;
+            pageDiv.classList.add('style-1');
+            pageDiv.style.left = 0;
             setTimeAndDateWidgetHeight(clientHeight, 0.7, 0.3);
             style++;
             break;
           case 2:
-            page.classList.remove('style-2');
-            page.classList.add('style-2');
-            page.style.left = -((clientHeight - clientWidth) / 2)+'px';
+            pageDiv.classList.remove('style-2');
+            pageDiv.classList.add('style-2');
+            pageDiv.style.left = -((clientHeight - clientWidth) / 2)+'px';
             setTimeAndDateWidgetHeight(clientWidth, 0.7, 0.3);
             style++;
             break;
           default:
-            page.classList.remove('style-1');
-            page.classList.remove('style-2');
-            page.style.left = 0;
+            pageDiv.classList.remove('style-1');
+            pageDiv.classList.remove('style-2');
+            pageDiv.style.left = 0;
             setTimeAndDateWidgetHeight(clientHeight, 0.4, 0.3)
             style = 1;
         }
@@ -175,16 +186,16 @@ permalink: /clock/
         var weekList = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
         var weekString = weekList[date.getDay()]
         if(last_time != timeString){
-            document.getElementById("time").innerHTML = timeString
-            document.getElementById("date").innerHTML = dateString + ' ' +  weekString
+            timeDiv.innerHTML = timeString
+            dateDiv.innerHTML = dateString + ' ' +  weekString
         }
         last_time = timeString;
       }
       updateTime()
-      setInterval("updateTime()", 1 * 1000)
+      interval_id = setInterval("updateTime()", 1 * 1000)
 
       function flash() {
-        page.classList.add('flash');
+        pageDiv.classList.add('flash');
         setTimeout("page.classList.remove('flash')",1000)
       }
     </script>
