@@ -112,6 +112,7 @@ permalink: /clock/
 
     <script>
       var last_time;
+      var last_flash;
       var interval_id;
       var style = 0;
       const timeDiv = document.getElementById("time");
@@ -175,7 +176,8 @@ permalink: /clock/
         var date = new Date()
         var utc8DiffMinutes = date.getTimezoneOffset() + 480
         date.setMinutes(date.getMinutes() + utc8DiffMinutes);
-        if (date.getMinutes() == 00 &&  date.getSeconds() < 2) {
+        if (date.getMinutes() == 0 &&  date.getHours() != last_flash) {
+          last_flash = date.getHours();
           flash();
         }
         var timeString = date.getHours() + ':' + ('0' + date.getMinutes()).slice(-2)
@@ -189,7 +191,7 @@ permalink: /clock/
         last_time = timeString;
       }
       updateTime()
-      interval_id = setInterval("updateTime()", 1 * 1000)
+      interval_id = setInterval("updateTime()", 60000)
 
       function flash() {
         document.body.style.backgroundColor = '#000';
