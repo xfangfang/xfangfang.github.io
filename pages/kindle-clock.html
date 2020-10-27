@@ -41,9 +41,6 @@ permalink: /clock/
           height: 100%;
           font-family: 'Julius Sans One', sans-serif;
         }
-        .flash {
-          background-color: #000;
-        }
         .flash #weather-v2-plugin-standard{
           display: none;
         }
@@ -195,8 +192,9 @@ permalink: /clock/
       interval_id = setInterval("updateTime()", 1 * 1000)
 
       function flash() {
+        document.body.style.backgroundColor = '#000';
         pageDiv.classList.add('flash');
-        setTimeout("page.classList.remove('flash')",1000)
+        setTimeout("page.classList.remove('flash');document.body.style.backgroundColor = '#FFF';",1000)
       }
     </script>
 </body>
