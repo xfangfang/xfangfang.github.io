@@ -10,23 +10,36 @@ permalink: /clock/
     <title>clock</title>
     <link href="https://fonts.font.im/css2?family=Julius+Sans+One" rel="stylesheet">
     <style>
-      /* default: do nothing*/
-      .style-0 {
-
-      }
-      /* style 1: hide weather widget */
-      .style-1 #weather-v2-plugin-standard{
+      /* style 1: hide motto widget */
+      .style-remove-motto #motto{
         display: none;
       }
-      /* style 2: hide weather widget, rotate 90deg,larger text */
-      .style-2 {
+      /* style 2: hide motto widget, rotate 90deg, larger text */
+      .style-rotate90 {
         -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
       }
-      .style-2 #weather-v2-plugin-standard{
+      .style-larger-time #time{
+        font-size: 13rem;
+      }
+      /* style 3: hide motto widget, rotate -90deg, larger text */
+      .style-rotate270 {
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+      }
+      /* style 4: zen mode */
+      .style-zen #time{
         display: none;
       }
-      .style-2 #time{
-        font-size: 13rem;
+      .style-zen #date{
+        display: none;
+      }
+      .style-zen #zen{
+        display: flex;
+        text-align: center;
+        font-size: 10rem;
+        font-weight: 700;
+        justify-content: center;
       }
     </style>
     <style>
@@ -41,9 +54,6 @@ permalink: /clock/
           height: 100%;
           font-family: 'Julius Sans One', sans-serif;
         }
-        .flash #weather-v2-plugin-standard{
-          display: none;
-        }
         #time,
         #date {
           width: 100%;
@@ -55,74 +65,27 @@ permalink: /clock/
           top: 0;
           height: 40%;
           font-size: 10rem;
-
           font-weight: 700;
         }
         #date {
           height: 30%;
           font-size: 5rem;
         }
-
-        /* adjust weather width */
-        #weather-v2-plugin-standard {
-          margin: auto !important;
-        }
-
-        .wv-lt-location {
-          text-align: center !important;
-        }
-        .wv-lt-location span {
-          font-size: 2rem !important;
-        }
-        .wv-lt-location a {
-            font-size: 1rem !important;
-        }
-
-        img {
-            width: 7rem !important;
-            margin: 0 !important;
-        }
-        .wv-n-h-now-img {
-          text-align: center !important;
-        }
-
-        .wv-v-h-row {
-          display:flex;
-          display:-webkit-box;
-        }
-        .wv-v-h-location {
-          width: 33% !important;
-          margin-top: 3em;
-        }
-        .wv-v-h-col-left {
-          width: 66% !important;
-        }
-        .wv-lt-refresh,.wv-n-h-now-alarm,.wv-n-h-now-rain,.wv-n-h-now-txt {
-            display: none !important;
-        }
-
-        .wv-v-h-now {
-          margin: 0 !important;
-          padding: 0 !important;
-        }
-        .wv-n-h-now-tmp{
-            font-size: 3rem !important;
-        }
-        .wv-top-select,.wv-top-button {
-          width: 100% !important;
-        }
-        .wv-top-col-3-c{
-          margin: 10px !important;
-        }
-        .wv-n-h-now-content {
+        #motto {
+          height: 30%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           text-align: center;
-          width: 50% !important;
+          font-size: 1.4rem;
+          line-height: 3rem;
         }
-        .wv-lt-col-7 {
-          width: 100% !important;
+        #zen {
+          display: none;
         }
-
-        /* adjust weather width end */
+        a {
+          display: none;
+        }
     </style>
 </head>
 
@@ -131,25 +94,8 @@ permalink: /clock/
     <div class="page style-0" id="page" >
       <div class="time" id="time" onclick="changeStyle()"></div>
       <div class="date" id="date" onclick="pause()"></div>
-
-      <!-- weather widget from  https://cj.weather.com.cn/ -->
-      <div id="weather-v2-plugin-standard"></div>
-      <script>
-        WIDGET = {
-            CONFIG: {
-                "layout": 1,
-                "width": document.documentElement.clientWidth * 0.7,
-                "height": document.documentElement.clientHeight * 0.3,
-                "background": 5,
-                "dataColor": "000000",
-                "modules": "10",
-                "key": "1W26JbTAJH",
-                "language": "auto"
-              }
-        }
-      </script>
-      <script src="https://apip.weatherdt.com/standard/static/js/weather-standard-common.js?v=2.0"></script>
-     <!-- weather widget end -->
+      <div class="zen" id="zen" onclick="changeStyle()"></div>
+      <div class="motto" id="motto" onclick="setMotto()"></div>
     </div>
 
 
@@ -158,61 +104,132 @@ permalink: /clock/
       var last_flash;
       var interval_id;
       var style = 0;
+      var timezone = 8;
+      var motto = "";
+      var zenmode_start = true;
+      var zenmode_time;
+      var zenmode_relax_time;
+      var zenmode_interval_id;
+      var zenmode_relax_interval_id
       const timeDiv = document.getElementById("time");
       const dateDiv = document.getElementById("date");
       const pageDiv = document.getElementById("page");
+      const mottoDiv = document.getElementById("motto");
+      const zenDiv = document.getElementById("zen");
       const halt = "HALT";
+      const zenTime = 25;
+      const zenRelaxTime = 5;
+      const TIME_INTE = 60000
 
       function pause(){
         if (timeDiv.innerHTML == halt) {
           last_time = 0;
           updateTime()
-          interval_id = setInterval("updateTime()", 1 * 1000)
+          interval_id = setInterval("updateTime()", TIME_INTE)
         } else {
           clearInterval(interval_id);
           timeDiv.innerHTML = halt;
         }
       }
-      function setTimeAndDateWidgetHeight(base,timeHeight,dateHeight) {
+
+      function setWidgetHeight(base,timeHeight,dateHeight,mottoHeight=0.3,zenHeight=0.6) {
         timeDiv.style.height = base*timeHeight+"px";
         timeDiv.style.lineHeight = base*timeHeight+"px";
         dateDiv.style.height = base*dateHeight+"px";
         dateDiv.style.lineHeight = base*dateHeight+"px";
+        zenDiv.style.height = base*zenHeight+"px";
+        zenDiv.style.lineHeight = base*zenHeight+"px";
+        mottoDiv.style.height = base*mottoHeight+"px";
       }
+
+      function pauseZenMode(){
+        if(zenmode_start == false){
+          zenmode_time = zenTime;
+          updateZenTime();
+          zenmode_interval_id = setInterval("updateZenTime()", TIME_INTE);
+          zenmode_start = true;
+        } else {
+          zenmode_start = false;
+          clearInterval(zenmode_interval_id);
+          clearInterval(zenmode_relax_interval_id);
+          setMotto();
+        }
+      }
+
+      function updateZenTime(){
+        zenDiv.innerHTML = zenmode_time;
+        if(zenmode_time == 0){
+          clearInterval(zenmode_interval_id);
+          zenmode_relax_time = zenRelaxTime;
+          flash();
+          updateZenRelaxTime();
+          zenmode_relax_interval_id = setInterval("updateZenRelaxTime()", TIME_INTE);
+        }
+        setMotto("ZEN MODE: CONCENTRATE");
+        zenmode_time--;
+      }
+
+      function updateZenRelaxTime(){
+        zenDiv.innerHTML = zenmode_relax_time;
+        if(zenmode_relax_time == 0){
+          clearInterval(zenmode_relax_interval_id);
+          zenmode_time = zenTime;
+          flash();
+          updateZenTime();
+          zenmode_interval_id = setInterval("updateZenTime()", TIME_INTE);
+        }
+        setMotto("ZEN MODE: RELAX");
+        zenmode_relax_time--;
+      }
+
       function changeStyle() {
         var clientHeight = document.documentElement.clientHeight;
         var clientWidth = document.documentElement.clientWidth;
         switch (style) {
           case 1:
-            pageDiv.classList.add('style-1');
+            pageDiv.classList.add('style-remove-motto');
             pageDiv.style.left = 0;
-            setTimeAndDateWidgetHeight(clientHeight, 0.7, 0.3);
+            setWidgetHeight(clientHeight, 0.7, 0.3);
             style++;
             break;
           case 2:
-            pageDiv.classList.remove('style-2');
-            pageDiv.classList.add('style-2');
+            pageDiv.classList.add('style-rotate90');
+            pageDiv.classList.add('style-larger-time')
             pageDiv.style.left = -((clientHeight - clientWidth) / 2)+'px';
-            setTimeAndDateWidgetHeight(clientWidth, 0.7, 0.3);
+            setWidgetHeight(clientWidth, 0.7, 0.3);
             style++;
             break;
-          default:
-            pageDiv.classList.remove('style-1');
-            pageDiv.classList.remove('style-2');
+          case 3:
+            pageDiv.classList.remove('style-rotate90');
+            pageDiv.classList.add('style-rotate270');
+            pageDiv.style.left = ((clientHeight - clientWidth) / 2)+'px';
+            style++;
+            break;
+          case 4:
+            pageDiv.classList.remove('style-remove-motto');
+            pageDiv.classList.remove('style-rotate270');
+            pageDiv.classList.remove('style-larger-time');
+            pageDiv.classList.add('style-zen');
             pageDiv.style.left = 0;
-            setTimeAndDateWidgetHeight(clientHeight, 0.4, 0.3)
+            setWidgetHeight(clientHeight, 0, 0, 0.3, 0.7)
+            style++;
+            pause();
+            pauseZenMode();
+            break;
+          default:
+            pageDiv.classList.remove('style-zen');
+            setWidgetHeight(clientHeight, 0.4, 0.3)
             style = 1;
+            pauseZenMode();
+            pause();
         }
       }
-      changeStyle();
 
       function fontSizeAutoChange(){
         var clientHeight = document.documentElement.clientHeight;
         var clientWidth = document.documentElement.clientWidth;
         document.documentElement.style.fontSize=(clientHeight/40)+"px";
       }
-      fontSizeAutoChange();
-      window.onresize=fontSizeAutoChange;
 
       function getQueryVariable(variable){
         var query = window.location.search.substring(1);
@@ -226,7 +243,6 @@ permalink: /clock/
 
       function updateTime() {
         var date = new Date()
-        var timezone = getQueryVariable("timezone") ? getQueryVariable("timezone") : 8
         var utc8DiffMinutes = date.getTimezoneOffset() + timezone * 60;
         date.setMinutes(date.getMinutes() + utc8DiffMinutes);
         if (date.getMinutes() == 0 &&  date.getHours() != last_flash) {
@@ -243,14 +259,46 @@ permalink: /clock/
         }
         last_time = timeString;
       }
-      updateTime()
-      interval_id = setInterval("updateTime()", 60000)
 
       function flash() {
         document.body.style.backgroundColor = '#000';
         pageDiv.classList.add('flash');
         setTimeout("page.classList.remove('flash');document.body.style.backgroundColor = '#FFF';",1000)
       }
+
+      function setMotto(text="") {
+        var motto_list = [
+          'Pain past is pleasure.',
+          'While there is life, there is hope.',
+          'Wisdom in the mind is better than\\nmoney in the hand.',
+          'Storms make trees take deeper roots.',
+          'Nothing is impossible for\\na willing heart.',
+          'The shortest answer is doing.',
+          'All things are difficult befor\\nthey are easy.',
+          'Great hopes make great man.',
+        ]
+        if(text == ""){
+          text = motto
+          if(motto == ""){
+            var index = Math.floor((Math.random()*motto_list.length));
+            text = motto_list[index];
+          }
+        }
+
+        text = text.replaceAll("\\n","<br/>");
+        mottoDiv.innerHTML = text;
+      }
+
+      changeStyle();
+      fontSizeAutoChange();
+      window.onresize=fontSizeAutoChange;
+      motto = getQueryVariable("motto") ? getQueryVariable("motto") : ""
+      setMotto()
+      timezone = getQueryVariable("timezone") ? getQueryVariable("timezone") : 8
+      updateTime()
+      interval_id = setInterval("updateTime()", TIME_INTE)
+
     </script>
+    <script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1279802450&web_id=1279802450"></script>
 </body>
 </html>
