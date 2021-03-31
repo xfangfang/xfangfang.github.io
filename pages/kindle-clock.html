@@ -118,6 +118,7 @@ permalink: /clock/
         clock_running = true;
         last_time = 0;
         updateTime()
+        clearInterval(interval_id);
         interval_id = setInterval("updateTime()", TIME_INTE)
       }
 
@@ -142,6 +143,8 @@ permalink: /clock/
           console.log("zen start")
           zenmode_time = zenTime;
           updateZenTime();
+          clearInterval(zenmode_interval_id);
+          clearInterval(zenmode_relax_interval_id);
           zenmode_interval_id = setInterval("updateZenTime()", TIME_INTE);
           zenmode_running = true;
         } else {
@@ -157,10 +160,11 @@ permalink: /clock/
       function updateZenTime(){
         timeDiv.innerHTML = zenmode_time;
         if(zenmode_time == 0){
-          clearInterval(zenmode_interval_id);
           zenmode_relax_time = zenRelaxTime;
           flash();
           updateZenRelaxTime();
+          clearInterval(zenmode_relax_interval_id);
+          clearInterval(zenmode_interval_id);
           zenmode_relax_interval_id = setInterval("updateZenRelaxTime()", TIME_INTE);
         }
         setMotto("ZEN MODE: CONCENTRATE");
@@ -170,10 +174,11 @@ permalink: /clock/
       function updateZenRelaxTime(){
         timeDiv.innerHTML = zenmode_relax_time;
         if(zenmode_relax_time == 0){
-          clearInterval(zenmode_relax_interval_id);
           zenmode_time = zenTime;
           flash();
           updateZenTime();
+          clearInterval(zenmode_relax_interval_id);
+          clearInterval(zenmode_interval_id);
           zenmode_interval_id = setInterval("updateZenTime()", TIME_INTE);
         }
         setMotto("ZEN MODE: RELAX");
@@ -237,7 +242,7 @@ permalink: /clock/
         var vars = query.split("&");
         for (var i=0;i<vars.length;i++) {
                var pair = vars[i].split("=");
-               if(pair[0] == variable){return pair[1];}
+               if(pair[0] == variable){return decodeURI(pair[1]);}
         }
         return(false);
      }
@@ -298,14 +303,12 @@ permalink: /clock/
         mottoDiv.innerHTML = text;
       }
 
+      timezone = getQueryVariable("timezone") ? getQueryVariable("timezone") : 8
       changeStyle();
       fontSizeAutoChange();
       window.onresize=fontSizeAutoChange;
       motto = getQueryVariable("motto") ? getQueryVariable("motto") : ""
       setMotto()
-      timezone = getQueryVariable("timezone") ? getQueryVariable("timezone") : 8
-      updateTime()
-      interval_id = setInterval("updateTime()", TIME_INTE)
 
     </script>
     <script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1279802450&web_id=1279802450"></script>
