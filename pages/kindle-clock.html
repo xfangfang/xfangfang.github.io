@@ -64,7 +64,7 @@ permalink: /clock/
         #motto {
           height: 30%;
           text-align: center;
-          font-size: 1.4rem;
+          font-size: 1.8rem;
           line-height: 3rem;
         }
         a {
@@ -286,6 +286,7 @@ permalink: /clock/
           'While there is life, there is hope.',
           'Wisdom in the mind is better than\\nmoney in the hand.',
           'Storms make trees take deeper roots.',
+          'Patience is bitter,\\nbut its fruit is sweet.\\n----Rousseau',
           'Nothing is impossible for\\na willing heart.',
           'The shortest answer is doing.',
           'All things are difficult befor\\nthey are easy.',
@@ -294,7 +295,7 @@ permalink: /clock/
         if(!text){
           text = motto
           if(motto == ""){
-            var index = Math.floor((Math.random()*motto_list.length));
+            var index = Math.round((Math.random()*motto_list.length));
             text = motto_list[index];
           }
         }
