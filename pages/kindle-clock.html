@@ -24,22 +24,12 @@ permalink: /clock/
       }
       /* style 3: hide motto widget, rotate -90deg, larger text */
       .style-rotate270 {
-        -webkit-transform: rotate(-90deg);
-        transform: rotate(-90deg);
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
       }
       /* style 4: zen mode */
-      .style-zen #time{
-        display: none;
-      }
       .style-zen #date{
         display: none;
-      }
-      .style-zen #zen{
-        display: flex;
-        text-align: center;
-        font-size: 10rem;
-        font-weight: 700;
-        justify-content: center;
       }
     </style>
     <style>
@@ -73,15 +63,9 @@ permalink: /clock/
         }
         #motto {
           height: 30%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
           text-align: center;
           font-size: 1.4rem;
           line-height: 3rem;
-        }
-        #zen {
-          display: none;
         }
         a {
           display: none;
@@ -93,8 +77,7 @@ permalink: /clock/
 
     <div class="page style-0" id="page" >
       <div class="time" id="time" onclick="changeStyle()"></div>
-      <div class="date" id="date" onclick="pause()"></div>
-      <div class="zen" id="zen" onclick="changeStyle()"></div>
+      <div class="date" id="date" onclick="clock_toggle()"></div>
       <div class="motto" id="motto" onclick="setMotto()"></div>
     </div>
 
@@ -105,8 +88,9 @@ permalink: /clock/
       var interval_id;
       var style = 0;
       var timezone = 8;
+      var clock_running = false;
       var motto = "";
-      var zenmode_start = true;
+      var zenmode_running = false;
       var zenmode_time;
       var zenmode_relax_time;
       var zenmode_interval_id;
@@ -115,49 +99,63 @@ permalink: /clock/
       const dateDiv = document.getElementById("date");
       const pageDiv = document.getElementById("page");
       const mottoDiv = document.getElementById("motto");
-      const zenDiv = document.getElementById("zen");
       const halt = "HALT";
       const zenTime = 25;
       const zenRelaxTime = 5;
       const TIME_INTE = 60000
 
-      function pause(){
-        if (timeDiv.innerHTML == halt) {
-          last_time = 0;
-          updateTime()
-          interval_id = setInterval("updateTime()", TIME_INTE)
-        } else {
-          clearInterval(interval_id);
-          timeDiv.innerHTML = halt;
+      function clock_toggle(){
+        if(clock_running){
+          clock_stop();
+        }else{
+          clock_start();
         }
       }
 
-      function setWidgetHeight(base,timeHeight,dateHeight,mottoHeight=0.3,zenHeight=0.6) {
+      function clock_start(){
+        console.log("clock start")
+        if(clock_running) return;
+        clock_running = true;
+        last_time = 0;
+        updateTime()
+        interval_id = setInterval("updateTime()", TIME_INTE)
+      }
+
+      function clock_stop(){
+        console.log("clock done")
+        clock_running = false;
+        clearInterval(interval_id);
+        timeDiv.innerHTML = halt;
+      }
+
+      function setWidgetHeight(base,timeHeight,dateHeight,mottoHeight) {
         timeDiv.style.height = base*timeHeight+"px";
         timeDiv.style.lineHeight = base*timeHeight+"px";
         dateDiv.style.height = base*dateHeight+"px";
         dateDiv.style.lineHeight = base*dateHeight+"px";
-        zenDiv.style.height = base*zenHeight+"px";
-        zenDiv.style.lineHeight = base*zenHeight+"px";
         mottoDiv.style.height = base*mottoHeight+"px";
       }
 
-      function pauseZenMode(){
-        if(zenmode_start == false){
+
+      function zenModeToggle(){
+        if(zenmode_running == false){
+          console.log("zen start")
           zenmode_time = zenTime;
           updateZenTime();
           zenmode_interval_id = setInterval("updateZenTime()", TIME_INTE);
-          zenmode_start = true;
+          zenmode_running = true;
         } else {
-          zenmode_start = false;
+          console.log("zen done")
+          zenmode_running = false;
           clearInterval(zenmode_interval_id);
           clearInterval(zenmode_relax_interval_id);
           setMotto();
+          timeDiv.innerHTML = halt;
         }
       }
 
       function updateZenTime(){
-        zenDiv.innerHTML = zenmode_time;
+        timeDiv.innerHTML = zenmode_time;
         if(zenmode_time == 0){
           clearInterval(zenmode_interval_id);
           zenmode_relax_time = zenRelaxTime;
@@ -170,7 +168,7 @@ permalink: /clock/
       }
 
       function updateZenRelaxTime(){
-        zenDiv.innerHTML = zenmode_relax_time;
+        timeDiv.innerHTML = zenmode_relax_time;
         if(zenmode_relax_time == 0){
           clearInterval(zenmode_relax_interval_id);
           zenmode_time = zenTime;
@@ -189,39 +187,42 @@ permalink: /clock/
           case 1:
             pageDiv.classList.add('style-remove-motto');
             pageDiv.style.left = 0;
-            setWidgetHeight(clientHeight, 0.7, 0.3);
+            setWidgetHeight(clientHeight, 0.7, 0.3, 0);
             style++;
             break;
           case 2:
             pageDiv.classList.add('style-rotate90');
             pageDiv.classList.add('style-larger-time')
             pageDiv.style.left = -((clientHeight - clientWidth) / 2)+'px';
-            setWidgetHeight(clientWidth, 0.7, 0.3);
+            setWidgetHeight(clientWidth, 0.7, 0.3, 0);
             style++;
             break;
+          // case 3:
+          //   pageDiv.classList.remove('style-rotate90');
+          //   pageDiv.classList.add('style-rotate270');
+          //   pageDiv.style.left = ((clientHeight - clientWidth) / 2)+'px';
+          //   style++;
+          //   break;
           case 3:
             pageDiv.classList.remove('style-rotate90');
-            pageDiv.classList.add('style-rotate270');
-            pageDiv.style.left = ((clientHeight - clientWidth) / 2)+'px';
-            style++;
-            break;
-          case 4:
             pageDiv.classList.remove('style-remove-motto');
             pageDiv.classList.remove('style-rotate270');
             pageDiv.classList.remove('style-larger-time');
             pageDiv.classList.add('style-zen');
+            setWidgetHeight(clientHeight, 0.7, 0, 0.3)
             pageDiv.style.left = 0;
-            setWidgetHeight(clientHeight, 0, 0, 0.3, 0.7)
             style++;
-            pause();
-            pauseZenMode();
+            clock_stop();
+            zenModeToggle();
             break;
-          default:
+          case 4:
+            zenModeToggle();
             pageDiv.classList.remove('style-zen');
-            setWidgetHeight(clientHeight, 0.4, 0.3)
+          default:
+            setWidgetHeight(clientHeight, 0.4, 0.3, 0.3)
+            pageDiv.style.left = 0;
             style = 1;
-            pauseZenMode();
-            pause();
+            clock_start();
         }
       }
 
@@ -266,7 +267,15 @@ permalink: /clock/
         setTimeout("page.classList.remove('flash');document.body.style.backgroundColor = '#FFF';",1000)
       }
 
-      function setMotto(text="") {
+      String.prototype.replaceAll = function(targetStr, newStr) {
+        var sourceStr = this.valueOf()
+        while (sourceStr.indexOf(targetStr) !== -1) {
+          sourceStr = sourceStr.replace(targetStr, newStr)
+        }
+        return sourceStr
+      }
+
+      function setMotto(text) {
         var motto_list = [
           'Pain past is pleasure.',
           'While there is life, there is hope.',
@@ -277,7 +286,7 @@ permalink: /clock/
           'All things are difficult befor\\nthey are easy.',
           'Great hopes make great man.',
         ]
-        if(text == ""){
+        if(!text){
           text = motto
           if(motto == ""){
             var index = Math.floor((Math.random()*motto_list.length));
