@@ -6,8 +6,8 @@ permalink: /clock/
 <html>
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>clock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>KINDLE CLOCK</title>
     <link href="https://fonts.font.im/css2?family=Julius+Sans+One" rel="stylesheet">
     <style>
       /* style 1: hide motto widget */
@@ -37,16 +37,21 @@ permalink: /clock/
       }
     </style>
     <style>
+        html,
         body {
           color: #000000;
+          font-family: 'Julius Sans One', sans-serif;
           background-color: #ffffff;
           margin: 0;
+          padding: 0;
+          height: 100%;
+          width: 100%;
         }
         .page {
           position: fixed;
           width: 100%;
           height: 100%;
-          font-family: 'Julius Sans One', sans-serif;
+          /* background-color: aquamarine; */
         }
         #time,
         #date {
@@ -82,17 +87,11 @@ permalink: /clock/
           position: absolute;
           width: 100%;
           margin:0 auto;
-          font-family: 'Julius Sans One', sans-serif;
         }
         #tips-title {
           font-size: 13rem;
-          line-height: 13rem;
-          margin-top: 22%;
           font-weight: 700;
-        }
-        #tips-content {
-          margin-top: 20%;
-        }
+        }  
     </style>
 </head>
 
@@ -108,6 +107,7 @@ permalink: /clock/
     </div>
 
     <script type="text/javascript" src="http://s9.cnzz.com/z_stat.php?id=1279802450&web_id=1279802450"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"></script>
     <script>
       var last_time;
       var last_flash;
@@ -210,7 +210,7 @@ permalink: /clock/
         if(zenmode_time == 0){
           console.log("zenmode:relax")
           zenmode_relax_time = zenRelaxTime;
-          flash();
+          flash(1000);
           updateZenRelaxTime();
           clearInterval(zenmode_relax_interval_id);
           clearInterval(zenmode_interval_id);
@@ -227,7 +227,7 @@ permalink: /clock/
         if(zenmode_relax_time == 0){
           console.log("zenmode concentrate")
           zenmode_time = zenTime;
-          flash();
+          flash(1000);
           updateZenTime();
           clearInterval(zenmode_relax_interval_id);
           clearInterval(zenmode_interval_id);
@@ -244,66 +244,93 @@ permalink: /clock/
         switch (style) {
           case 1:
           case "1":
+            saveStyle(style);
             pageDiv.classList.remove('style-smaller-motto');
-            mottoDiv.hidden = true;
+            pageDiv.classList.add('style-remove-motto')
             setWidgetHeight(clientHeight, 0.7, 0.3, 0);
-            style++;
+            style = 2;
             break;
           case 2:
           case "2":
+            saveStyle(style);
             pageDiv.classList.add('style-rotate270');
             pageDiv.classList.add('style-larger-time')
-            mottoDiv.hidden = true;
-            setWidgetHeight(clientWidth, 0.7, 0.3, 0);
+            pageDiv.classList.add('style-remove-motto')
+            setWidgetHeight(clientWidth, 0.7, 0.3, 0); 
             var bais = (clientHeight - clientWidth) / 2;
             setPage(clientHeight, clientWidth, bais, -bais);
-            style++;
+// hack for kindle 1
+            timeDiv.innerHTML = ""
+            setTimeout("style = 22; changeStyle();", 1);
+            break;
+          case 22:
+            timeDiv.innerHTML = last_time;
+// hack for kindle 1 done
+            style = 3;
             break;
           case 3:
           case "3":
+            saveStyle(style);
             pageDiv.classList.remove('style-rotate270');
-            pageDiv.classList.add('style-larger-time')
-            pageDiv.classList.add('style-rotate90');
-            mottoDiv.hidden = true;
+            pageDiv.classList.add('style-larger-time');
+            pageDiv.classList.add('style-remove-motto');
             setWidgetHeight(clientWidth, 0.7, 0.3, 0);
             var bais = (clientHeight - clientWidth) / 2;
-            setPage(clientHeight, clientWidth, bais, -bais);
-            style = 9;
+// hack for kindle 2
+            setPage(clientHeight*0.5, clientWidth*0.5, bais, -bais);
+            setTimeout("style = 33; changeStyle();", 1);
             break;
-          case 9:
-            pageDiv.style.left = "0px";
-            pageDiv.style.top = "0px";
-            showTips("ZEN", "concentrate 25min and relax 5min", 5000);
-            clock_stop();
-            pageDiv.classList.remove('style-rotate90');
-            setTimeout("style = 4;changeStyle();",1000);
+          case 33:
+            timeDiv.innerHTML = ""
+            pageDiv.classList.add('style-rotate90');
+            setPage(clientHeight, clientWidth, bais, -bais);
+            setTimeout("style = 333; changeStyle();", 1);
+            break;
+          case 333:
+            timeDiv.innerHTML = last_time;
+// hack for kindle 2 done
+            style = 4;
             break;
           case 4:
           case "4":
-            mottoDiv.hidden = false;
-            dateDiv.hidden = true;
+            saveStyle(style);
+            pageDiv.classList.remove('style-rotate90');
+            pageDiv.classList.remove('style-remove-motto')
+            pageDiv.classList.add('style-remove-date')
+            pageDiv.classList.add('style-default');
             setWidgetHeight(clientHeight, 0.7, 0, 0.3);
             setPage(clientWidth, clientHeight, 0, 0);
             clock_stop();
             zenModeStart();
-            style++;
+// hack for kindle 3
+            timeDiv.innerHTML = ""
+            setTimeout("style = 44; changeStyle();", 1);
+          break;
+          case 44:
+            timeDiv.innerHTML = zenTime
+// hack for kindle 3 done
+            style = 5;
             break;
           case 5:
           case "5":
-            zenModeStop();
+            saveStyle(style);
             pageDiv.classList.remove('style-larger-time');
-            dateDiv.hidden = false;
+            pageDiv.classList.remove('style-remove-date');
+            zenModeStop();
           default:
-            setWidgetHeight(clientHeight, 0.4, 0.3, 0.3)
+            setWidgetHeight(clientHeight, 0.4, 0.3, 0.3);
             style = 1;
             clock_start();
         }
-        _czc.push(["_trackEvent","kindle","style_change",style,"time"])
       }
 
       function fontSizeAutoChange(){
         var clientHeight = document.documentElement.clientHeight;
         var clientWidth = document.documentElement.clientWidth;
+        tipsDiv.style.width = clientWidth+"px";
+        tipsDiv.style.height = clientHeight+"px";
+        tipsTitleDiv.style.height = clientHeight*0.5+"px";
+        tipsTitleDiv.style.lineHeight = clientHeight*0.5+"px";
         document.documentElement.style.fontSize=(clientHeight/40)+"px";
       }
 
@@ -323,7 +350,7 @@ permalink: /clock/
         date.setMinutes(date.getMinutes() + utc8DiffMinutes);
         if (date.getMinutes() == 0 &&  date.getHours() != last_flash) {
           last_flash = date.getHours();
-          flash();
+          flash(1000);
         }
         var timeString = date.getHours() + ':' + ('0' + date.getMinutes()).slice(-2)
         var dateString = (date.getMonth() + 1) + '/' + date.getDate()
@@ -336,9 +363,9 @@ permalink: /clock/
         last_time = timeString;
       }
 
-      function flash() {
+      function flash(time) {
         document.body.style.backgroundColor = '#000';
-        setTimeout("document.body.style.backgroundColor = '#FFF';",1000)
+        setTimeout("document.body.style.backgroundColor = '#FFF';",time)
       }
 
       String.prototype.replaceAll = function(targetStr, newStr) {
@@ -382,21 +409,37 @@ permalink: /clock/
         mottoDiv.innerHTML = text;
       }
 
-      flash();
+      function saveStyle(s){
+        var cookie = "style="+ s +"; expires=Thu, 18 Dec 2043 12:00:00 GMT"
+		    document.cookie = cookie
+        _czc.push(["_trackEvent","kindle","style",s,"time"])
+      }
+
+      function getCookieStyle(){
+        var name = "style=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) {
+          var c = ca[i].trim();
+          if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+        }
+        return 0;
+      }
+
+      flash(100);
       motto = getQueryVariable("motto") ? getQueryVariable("motto") : ""
       setMotto();
       timezone = getQueryVariable("timezone") ? getQueryVariable("timezone") : 8
-      style = getQueryVariable("style") ? getQueryVariable("style") : 0
-      if(style != 0){
-        _czc.push(["_trackEvent","kindle","style_default",style,"time"])
-      } else {
+      style = getQueryVariable("style") ? getQueryVariable("style") : (getCookieStyle() ? getCookieStyle() : 0)
+      if(style == 0){
         showTips("TIPS","try these urls:\n/clock?timezone=+10&style=3\n/clock?motto=hello\\nworld\ntips closing in 10s",10000);
       }
       clock_start();
       changeStyle();
       fontSizeAutoChange();
       window.onresize=fontSizeAutoChange;
-      _czc.push(["_trackEvent","kindle","timezone",timezone,"zen"])
+      if(timezone != 8){
+        _czc.push(["_trackEvent","kindle","timezone",timezone,"zen"])
+      }
       
     </script>
 </body>
