@@ -7,10 +7,10 @@ url: "https://xfangfang.github.io"
 theme_settings:
   # Meta
   title: xfangfang
-  avatar: assets/img/zhihu.png
+  avatar: assets/img/me.jpeg
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
-  description: "A website with blog posts and pages" # used by search engines
+  description: "xfangfang's blog of sharing programming developments" # used by search engines
 
   # Header and footer text
   header_text: > #two or three lines to describe your site
@@ -47,8 +47,8 @@ theme_settings:
   google_analytics: # Tracking ID, e.g. "UA-000000-01"
   disqus_shortname:
   katex: true # Enable if using math markup
-  portfolio: false
-  gobang: true
+  portfolio: true
+  gobang: false
   search: true
   tags: true
 
@@ -72,10 +72,9 @@ theme_settings:
   post_navigation: true
 
 # PAGINATION
-paginate: 5
+paginate: 10
 paginate_path: "blog/page:num"
-
-permalink: /:categories/:title
+permalink: /:title
 
 # PORTFOLIO
 collections:
