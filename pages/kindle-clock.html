@@ -91,8 +91,17 @@ permalink: /clock/
         #tips-title {
           font-size: 13rem;
           font-weight: 700;
-        }  
+        }
     </style>
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?035a58fc3c2febf54b86c3ff3c8719ff";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
 </head>
 
 <body scroll="no">
@@ -106,7 +115,6 @@ permalink: /clock/
       <div class="motto" id="motto" onclick="setMotto()"></div>
     </div>
 
-    <script type="text/javascript" src="http://s9.cnzz.com/z_stat.php?id=1279802450&web_id=1279802450"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"></script>
     <script>
       var last_time;
@@ -140,7 +148,7 @@ permalink: /clock/
         }else{
           clock_start();
         }
-        _czc.push(["_trackEvent","kindle","halt_change",clock_running,"data"]);
+        _hmt.push(["_trackEvent","kindle","halt_change",clock_running]);
       }
 
       function clock_start(){
@@ -193,7 +201,7 @@ permalink: /clock/
         clearInterval(zenmode_relax_interval_id);
         setMotto();
         if(zenmode_totaltime > 0){
-          _czc.push(["_trackEvent","kindle","zenmode_totaltime",zenmode_totaltime,"zen"])
+          _hmt.push(["_trackEvent","kindle","zenmode_totaltime",zenmode_totaltime])
         }
       }
 
@@ -256,7 +264,7 @@ permalink: /clock/
             pageDiv.classList.add('style-rotate270');
             pageDiv.classList.add('style-larger-time')
             pageDiv.classList.add('style-remove-motto')
-            setWidgetHeight(clientWidth, 0.7, 0.3, 0); 
+            setWidgetHeight(clientWidth, 0.7, 0.3, 0);
             var bais = (clientHeight - clientWidth) / 2;
             setPage(clientHeight, clientWidth, bais, -bais);
 // hack for kindle 1
@@ -411,8 +419,8 @@ permalink: /clock/
 
       function saveStyle(s){
         var cookie = "style="+ s +"; expires=Thu, 18 Dec 2043 12:00:00 GMT"
-		    document.cookie = cookie
-        _czc.push(["_trackEvent","kindle","style",s,"time"])
+        document.cookie = cookie
+        _hmt.push(["_trackEvent","kindle","style",s])
       }
 
       function getCookieStyle(){
@@ -438,9 +446,9 @@ permalink: /clock/
       fontSizeAutoChange();
       window.onresize=fontSizeAutoChange;
       if(timezone != 8){
-        _czc.push(["_trackEvent","kindle","timezone",timezone,"zen"])
+        _hmt.push(["_trackEvent","kindle","timezone",timezone])
       }
-      
+
     </script>
 </body>
 </html>
